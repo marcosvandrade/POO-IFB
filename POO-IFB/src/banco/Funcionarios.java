@@ -40,8 +40,8 @@ public class Funcionarios {
 		
 	}
 	
-	void alterarLimite() {
-		
+	void alterarLimite(Conta conta, double novolimite) {
+		conta.mudalimite(novolimite);
 	}
 	
 	void transferirConta() {

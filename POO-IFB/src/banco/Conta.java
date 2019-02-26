@@ -72,5 +72,10 @@ public class Conta {
 				
 		
 	}
+
+	public void mudalimite(double novolimite) {
+		limite = novolimite;
+		
+	}
 	
 }
