@@ -1,5 +1,6 @@
 package thehuxley;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class areaCirculo {
@@ -7,9 +8,17 @@ public class areaCirculo {
 	public static void main(String[] args) {
 		
 		Scanner s = new Scanner(System.in);
-		float raio = s.nextFloat();
+		double raio = s.nextDouble();
 		
-		 pi = 3.14159;
+		final double PI = 3.14159;
+		
+		double area = (raio * raio * PI) / 10000;
+					
+		DecimalFormat resultado = new DecimalFormat("#0.0000");
+				
+		System.out.println("Area = " + resultado.format(area));
+		
+		s.close();
 		
 	}
 
