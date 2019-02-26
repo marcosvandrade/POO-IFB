@@ -6,22 +6,15 @@ public class Agencia {
 	String codigo;
 	String nome;
 	String endereco;
-	Cliente cliente;
-	
+		
 	// metodos
 	
-	void criarConta() {
+	void transferirCliente(){
 		
 	}
 	
-	void fecharConta() {
+	void transferirFuncionario() {
 		
 	}
-	
-	void transferirConta() {
-		
-	}
-	
-	
 	
 }

@@ -5,17 +5,46 @@ import java.util.Date;
 public class Funcionarios {
 	
 	//atributos
-	String cpf;
+	int codigo;
+	String funcao;
+	String dpto;
+	String setor;
 	String nome;
 	Date dataAdmissao;
 	Date dataExclusao;
 	String endereco;
 	String telefone;
 	double salario;
+	double comissao;
+	boolean status;
 	
 	//metodos
 	
-	void pagarSalario(){
+	void pagarComissao() {
+		
+	}
+	
+	void pagarSalario() {
+		
+	}
+	
+	void estaAtivo() {
+		
+	}
+	
+	void criarConta() {
+		
+	}
+	
+	void fecharConta() {
+		
+	}
+	
+	void alterarLimite() {
+		
+	}
+	
+	void transferirConta() {
 		
 	}
 	
