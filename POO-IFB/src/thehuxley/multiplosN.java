@@ -8,39 +8,37 @@ public class multiplosN {
 
 		Scanner s = new Scanner(System.in);
 		
-		int M = s.nextInt();
 		int N = s.nextInt();
-		
-		int maior = 0;
-		int cont = 0;
+		int A = s.nextInt();
+		int B = s.nextInt();
+								
 		int i;
+		int cont = 0;
 		
-		if((M > N) || (N == 0) || (M == 0)) {
+		if((A > B) || (A == 0) || (B == 0)) {
 			
-			System.out.println("sem multiplos menores que " + N);
+			System.out.println("INEXISTENTE");
 			
 		} else {
-		
-			for(i = 1; i <= N; i++) {
-				
-				if(i % M == 0) {
-					cont = cont + 1;
-					if(i >= maior) {
-						maior = i;
+								
+				for(i = A; i <= B; i++) {
+						
+					if(i % N == 0) {
+						
+						cont = cont + 1;
+						System.out.println(i);
+						
 					}
-					if(cont == 0) {
-						System.out.println("sem multiplos menores que " + N);
-					}
+					
+					
 				}
 				
-			} 
-			
+				if(cont == 0) {
+					System.out.println("INEXISTENTE");
+				}
+				
 		}
-		
-		if(cont != 0) {
-			System.out.println(maior);
-		}
-		
+						
 		s.close();
 		
 
