@@ -8,6 +8,17 @@ public class Conta {
 	boolean ativa;
 	double limite;
 	
+	Conta(String numero, String tipo, double limite){
+		
+		this.saldo = 0.0;
+		this.numero = numero;
+		this.tipo = tipo;
+		this.ativa = true;
+		this.limite = limite;
+		System.out.println("Entrou no construtor");
+		
+	}
+	
 	// Métodos - Funções
 	double saldo(){
 		return saldo;

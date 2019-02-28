@@ -1,5 +1,6 @@
 package thehuxley;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class aumentoTrabalhadores {
@@ -17,8 +18,15 @@ public class aumentoTrabalhadores {
 			salario = (float) (salario + (salario * 0.07));
 		}
 		
+		if((salario < 300) && (salario > 0)) {
+			salario = (float) (salario + (salario * 0.05));
+		}
 		
 		
+		DecimalFormat resultado = new DecimalFormat("#0.00");
+		
+		System.out.println(resultado.format(salario));
+				
 		s.close();
 		
 	}
