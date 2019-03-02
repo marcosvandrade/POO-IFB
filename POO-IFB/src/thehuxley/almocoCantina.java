@@ -1,32 +1,47 @@
 package thehuxley;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class almocoCantina {
 
 	public static void main(String[] args) {
 		
-		Scanner s = new Scanner(System.in);
-		String comida = s.next();
-		String bebida = s.next();
+		double lasanha = 8.00;
+		double estrogonofe = 11.00;
+		double refrigerante = 3.00;
+		double suco = 2.50;
 		
-		enum comida{
-			
-		}
-		
-		double totalComida;
-		double totalBebida;
+		double totalPagar = 0.0;
+		DecimalFormat total = new DecimalFormat("#0.00");
 				
-		switch (comida.hashCode()) {
-		case String lasanha.hashCode():
-			
-			totalComida = 8.00;
-			
-			break;
-
-		default:
-			break;
+		Scanner s = new Scanner(System.in);
+		
+		String comer = s.next();
+		String comerM = comer.toUpperCase();
+		
+		String beber = s.next();
+		String beberM = beber.toUpperCase(); 
+				
+		if(comerM.equals("LASANHA")) {
+			totalPagar += lasanha; 
 		}
+		
+		else if(comerM.equals("ESTROGONOFE")){
+			totalPagar += estrogonofe;
+		}
+		
+		if(beberM.equals("REFRIGERANTE")) {
+			totalPagar += refrigerante;
+		}
+		
+		else if(beberM.equals("SUCO")) {
+			totalPagar += suco;
+		}
+		
+		System.out.println(total.format(totalPagar));
+				
+		s.close();
 		
 	}
 
