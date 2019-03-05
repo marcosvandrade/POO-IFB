@@ -2,7 +2,7 @@ package thehuxley;
 
 import java.util.Scanner;
 
-public class acidezSolucao {
+public class AcidezSolucao {
 
 	public static void main(String[] args) {
 		
