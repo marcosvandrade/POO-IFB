@@ -46,6 +46,7 @@
 package banco; /* domínio local */
 
 import com.sun.org.apache.xerces.internal.dom.DeferredProcessingInstructionImpl;
+import com.sun.security.ntlm.Client;
 
 /*- 
  * Este comentário deve conter todas as informações da classe ou interface de
@@ -66,7 +67,7 @@ import com.sun.org.apache.xerces.internal.dom.DeferredProcessingInstructionImpl;
  * siglas e abreviaturas, seja semântico.
  */
 
-public class Main {
+public abstract class Banco {
 
 /*-
  * Alinhamento do código
@@ -94,7 +95,7 @@ public class Main {
 		
 		//tarefa 2 - Operações de saque, depósito e transferência
 		
-		
+		marcos.
 		
 		System.out.println(marcos.toString());
 		

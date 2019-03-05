@@ -61,7 +61,7 @@ package banco;
 *
 */
 
-public class Cliente {
+public class Cliente extends Banco {
 	
 	/*
 	 * Os nomes de variáveis não deve começar com underscore _ ou sinal de dólar $
