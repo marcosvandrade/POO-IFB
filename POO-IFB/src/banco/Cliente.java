@@ -1,30 +1,30 @@
 // JAVA CODE CONVENTION
 
 /*-
- * Comentários de bloco podem começar com / * -, reconhecido pelo travessão (1)
- * como o início de um bloco de comentário que não deve ser reformatado, ou
- * seja é um alerta de que, quem o fez quer que mantenha nessa forma.
+ * Comentï¿½rios de bloco podem comeï¿½ar com / * -, reconhecido pelo travessï¿½o (1)
+ * como o inï¿½cio de um bloco de comentï¿½rio que nï¿½o deve ser reformatado, ou
+ * seja ï¿½ um alerta de que, quem o fez quer que mantenha nessa forma.
  */
 
 /*-
- * Comentários
+ * Comentï¿½rios
  *
- * Programas em Java podem ter dois tipos de comentários: comentários de
- * implementação do código e comentários de documentação. Observações de aplicação
- * são os encontrados no mesmo modo C ++, que são delimitados por / * ... * /, e
- * / /. Comentários de documentação (conhecido como "comentários doc") são
- * Java-only, e são delimitados por / ** ... * /. Comentários de documentação
- * podem ser extraídos para arquivos HTML usando a ferramenta javadoc.
+ * Programas em Java podem ter dois tipos de comentï¿½rios: comentï¿½rios de
+ * implementaï¿½ï¿½o do cï¿½digo e comentï¿½rios de documentaï¿½ï¿½o. Observaï¿½ï¿½es de aplicaï¿½ï¿½o
+ * sï¿½o os encontrados no mesmo modo C ++, que sï¿½o delimitados por / * ... * /, e
+ * / /. Comentï¿½rios de documentaï¿½ï¿½o (conhecido como "comentï¿½rios doc") sï¿½o
+ * Java-only, e sï¿½o delimitados por / ** ... * /. Comentï¿½rios de documentaï¿½ï¿½o
+ * podem ser extraï¿½dos para arquivos HTML usando a ferramenta javadoc.
  */
 
 /*- 
- * COMENTÁRIOS NO INÍCIO DA CLASSE COM O NOME DA CLASSE, INFORMAÇÃO DE VERSÃO,
- * DATA E HORA, AUTOR E INFORMAÇÕES GERAIS SOBRE O MÉTODO
+ * COMENTï¿½RIOS NO INï¿½CIO DA CLASSE COM O NOME DA CLASSE, INFORMAï¿½ï¿½O DE VERSï¿½O,
+ * DATA E HORA, AUTOR E INFORMAï¿½ï¿½ES GERAIS SOBRE O Mï¿½TODO
  */
 
 /*-
- * Um comentário de bloco deve ser precedido por uma linha em branco para
- * separá-la do resto do código.
+ * Um comentï¿½rio de bloco deve ser precedido por uma linha em branco para
+ * separï¿½-la do resto do cï¿½digo.
  */
 
 /**
@@ -32,49 +32,50 @@
  * 
  * Version Information		1.0
  * 
- * Date						5 de março de 2019								
+ * Date						5 de marï¿½o de 2019								
  * 
  * @author					Marcos Vasconcellos de Andrade
  * 
- * Copyright notice			Classe Cliente do projeto SISTEMA BANCÁRIO
+ * Copyright notice			Classe Cliente do projeto SISTEMA BANCï¿½RIO
  *  
  */
 
 /*-
  * PRIMEIRO O PACOTE E DEPOIS OS IMPORTs, SE HOUVEREM
- * O NOME DO PACOTE É UM COMPONENTE ÚNICO, ESCRITO EM MINÚSCULOS
+ * O NOME DO PACOTE ï¿½ UM COMPONENTE ï¿½NICO, ESCRITO EM MINï¿½SCULOS
  */
 
 package banco;
 
 /*-
-* Os nomes de classe devem ser substantivos, em maiúsculas e minúsculas com a
-* primeira letra de cada palavra interna em maiúscula. Tente manter seus nomes
+* Os nomes de classe devem ser substantivos, em maiï¿½sculas e minï¿½sculas com a
+* primeira letra de cada palavra interna em maiï¿½scula. Tente manter seus nomes
 * de classe simples e descritivo. Sempre evite palavras-ligadas , evite todas
-* siglas e abreviaturas, seja semântico.
+* siglas e abreviaturas, seja semï¿½ntico.
 */
 
 /**
-* Classe Cliente do Projeto SISTEMA BANCÁRIO
+* Classe Cliente do Projeto SISTEMA BANCï¿½RIO
 * 
 * destinada ao controle de clientes do banco
 *
 */
 
-public class Cliente extends Banco {
+public class Cliente {
 	
 	/*
-	 * Os nomes de variáveis não deve começar com underscore _ ou sinal de dólar $
-	 * personagens, mesmo que ambos sejam permitidos. Os nomes de variáveis devem
-	 * ser curtos, mas significativo. A escolha de um nome variável deve ser
-	 * mnemônico, isto é, concebidos para indicar ao observador casual a intenção da
-	 * sua utilização.
+	 * Os nomes de variï¿½veis nï¿½o deve comeï¿½ar com underscore _ ou sinal de dï¿½lar $
+	 * personagens, mesmo que ambos sejam permitidos. Os nomes de variï¿½veis devem
+	 * ser curtos, mas significativo. A escolha de um nome variï¿½vel deve ser
+	 * mnemï¿½nico, isto ï¿½, concebidos para indicar ao observador casual a intenï¿½ï¿½o da
+	 * sua utilizaï¿½ï¿½o.
 	 */
 	
 	//Atributos
 	private String nome;
 	private String cpf;
 	private Conta conta;
+	private Agencia agencia;
 	private String endereco;
 	
 	//construtor super
@@ -90,13 +91,17 @@ public class Cliente extends Banco {
 	}
 		
 	/*
-	 * Métodos devem ser verbos, com a letra minúscula em primeiro lugar, com a
-	 * primeira letra de cada palavra interna em maiúscula.
+	 * Mï¿½todos devem ser verbos, com a letra minï¿½scula em primeiro lugar, com a
+	 * primeira letra de cada palavra interna em maiï¿½scula.
 	 */
 	
-	//Métodos
+	//Mï¿½todos
 	public void atribuirConta(Conta c){
 		conta = c;
+	}
+	
+	public void atribuirAgencia(Agencia ag){
+		agencia = ag;
 	}
 
 	public String getNome() {
@@ -130,10 +135,48 @@ public class Cliente extends Banco {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
+	
+	public Agencia getAgencia() {
+		return agencia;
+	}
+
+	public void setAgencia(Agencia agencia) {
+		this.agencia = agencia;
+	}
 
 	@Override
 	public String toString() {
 		return "Cliente [nome=" + nome + ", cpf=" + cpf + ", conta=" + conta + ", endereco=" + endereco + "]";
 	}
+
+	public void sacar(double valor) {
+		conta.sacar(valor);
+	}
+
+	public void depositar(double valor) {
+		conta.depositar(valor);
+	}
+
+	public void transferir(double valor, Conta outraConta) {
+		conta.transferir(valor, outraConta);
+	}
+
+	public boolean verificarSaldo(double valor) {
+		return conta.verificarSaldo(valor);
+	}
+
+	public void mudarlimite(double novolimite) {
+		conta.mudarlimite(novolimite);
+	}
+
+	public double obterSaldo() {
+		return conta.obterSaldo();
+	}
+
+	public void transferirCliente(Agencia agDestino) {
+		agencia.transferirCliente(agDestino);
+	}
+	
+	
 
 }

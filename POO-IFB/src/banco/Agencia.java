@@ -1,30 +1,30 @@
 // JAVA CODE CONVENTION
 
 /*-
- * Comentários de bloco podem começar com / * -, reconhecido pelo travessão (1)
- * como o início de um bloco de comentário que não deve ser reformatado, ou
- * seja é um alerta de que, quem o fez quer que mantenha nessa forma.
+ * Comentï¿½rios de bloco podem comeï¿½ar com / * -, reconhecido pelo travessï¿½o (1)
+ * como o inï¿½cio de um bloco de comentï¿½rio que nï¿½o deve ser reformatado, ou
+ * seja ï¿½ um alerta de que, quem o fez quer que mantenha nessa forma.
  */
 
 /*-
- * Comentários
+ * Comentï¿½rios
  *
- * Programas em Java podem ter dois tipos de comentários: comentários de
- * implementação do código e comentários de documentação. Observações de aplicação
- * são os encontrados no mesmo modo C ++, que são delimitados por / * ... * /, e
- * / /. Comentários de documentação (conhecido como "comentários doc") são
- * Java-only, e são delimitados por / ** ... * /. Comentários de documentação
- * podem ser extraídos para arquivos HTML usando a ferramenta javadoc.
+ * Programas em Java podem ter dois tipos de comentï¿½rios: comentï¿½rios de
+ * implementaï¿½ï¿½o do cï¿½digo e comentï¿½rios de documentaï¿½ï¿½o. Observaï¿½ï¿½es de aplicaï¿½ï¿½o
+ * sï¿½o os encontrados no mesmo modo C ++, que sï¿½o delimitados por / * ... * /, e
+ * / /. Comentï¿½rios de documentaï¿½ï¿½o (conhecido como "comentï¿½rios doc") sï¿½o
+ * Java-only, e sï¿½o delimitados por / ** ... * /. Comentï¿½rios de documentaï¿½ï¿½o
+ * podem ser extraï¿½dos para arquivos HTML usando a ferramenta javadoc.
  */
 
 /*- 
- * COMENTÁRIOS NO INÍCIO DA CLASSE COM O NOME DA CLASSE, INFORMAÇÃO DE VERSÃO,
- * DATA E HORA, AUTOR E INFORMAÇÕES GERAIS SOBRE O MÉTODO
+ * COMENTï¿½RIOS NO INï¿½CIO DA CLASSE COM O NOME DA CLASSE, INFORMAï¿½ï¿½O DE VERSï¿½O,
+ * DATA E HORA, AUTOR E INFORMAï¿½ï¿½ES GERAIS SOBRE O Mï¿½TODO
  */
 
 /*-
- * Um comentário de bloco deve ser precedido por uma linha em branco para
- * separá-la do resto do código.
+ * Um comentï¿½rio de bloco deve ser precedido por uma linha em branco para
+ * separï¿½-la do resto do cï¿½digo.
  */
 
 /**
@@ -32,71 +32,81 @@
  * 
  * Version Information		1.0
  * 
- * Date						5 de março de 2019								
+ * Date						5 de marï¿½o de 2019								
  * 
  * @author					Marcos Vasconcellos de Andrade
  * 
- * Copyright notice			Classe Agencia do projeto SISTEMA BANCÁRIO
+ * Copyright notice			Classe Agencia do projeto SISTEMA BANCï¿½RIO
  *  
  */
 
 /*-
  * PRIMEIRO O PACOTE E DEPOIS OS IMPORTs, SE HOUVEREM
- * O NOME DO PACOTE É UM COMPONENTE ÚNICO, ESCRITO EM MINÚSCULOS
+ * O NOME DO PACOTE ï¿½ UM COMPONENTE ï¿½NICO, ESCRITO EM MINï¿½SCULOS
  */
 
-//O NOME DO PACOTE É UM COMPONENTE ÚNICO, ESCRITO EM MINÚSCULOS
+//O NOME DO PACOTE ï¿½ UM COMPONENTE ï¿½NICO, ESCRITO EM MINï¿½SCULOS
 package banco;
 
 //PRIMEIRO O PACOTE E DEPOIS OS IMPORTs, SE HOUVEREM
 
 /*- 
-* Este comentário deve conter todas as informações da classe ou interface de
-* forma ampla visando sua documentação.
+* Este comentï¿½rio deve conter todas as informaï¿½ï¿½es da classe ou interface de
+* forma ampla visando sua documentaï¿½ï¿½o.
 */
 
 /**
-* Classe Agencia do Projeto SISTEMA BANCÁRIO
+* Classe Agencia do Projeto SISTEMA BANCï¿½RIO
 * 
 * destinada ao controle das agencias bancarias
 *
 */
 
 /*-
-* Os nomes de classe devem ser substantivos, em maiúsculas e minúsculas com a
-* primeira letra de cada palavra interna em maiúscula. Tente manter seus nomes
+* Os nomes de classe devem ser substantivos, em maiï¿½sculas e minï¿½sculas com a
+* primeira letra de cada palavra interna em maiï¿½scula. Tente manter seus nomes
 * de classe simples e descritivo. Sempre evite palavras-ligadas , evite todas
-* siglas e abreviaturas, seja semântico.
+* siglas e abreviaturas, seja semï¿½ntico.
 */
 
-public class Agencia {
-	
+public class Agencia extends Cliente {
+		
 	/*
-	 * Os nomes de variáveis não deve começar com underscore _ ou sinal de dólar $
-	 * personagens, mesmo que ambos sejam permitidos. Os nomes de variáveis devem
-	 * ser curtos, mas significativo. A escolha de um nome variável deve ser
-	 * mnemônico, isto é, concebidos para indicar ao observador casual a intenção da
-	 * sua utilização.
+	 * Os nomes de variï¿½veis nï¿½o deve comeï¿½ar com underscore _ ou sinal de dï¿½lar $
+	 * personagens, mesmo que ambos sejam permitidos. Os nomes de variï¿½veis devem
+	 * ser curtos, mas significativo. A escolha de um nome variï¿½vel deve ser
+	 * mnemï¿½nico, isto ï¿½, concebidos para indicar ao observador casual a intenï¿½ï¿½o da
+	 * sua utilizaï¿½ï¿½o.
 	 */
 	
 	// atributos
 	String codigo;
 	String nome;
 	String endereco;
-	
+		
 	/*
-	 * Métodos devem ser verbos, com a letra minúscula em primeiro lugar, com a
-	 * primeira letra de cada palavra interna em maiúscula.
+	 * Mï¿½todos devem ser verbos, com a letra minï¿½scula em primeiro lugar, com a
+	 * primeira letra de cada palavra interna em maiï¿½scula.
 	 */
 	
-	// metodos
-		
-	void transferirCliente(){
-		
+	// construtor
+	public Agencia(String codigo, String nome, String endereco) {
+		this.codigo = codigo;
+		this.nome = nome;
+		this.endereco = endereco;
 	}
 	
+	// metodos
+				
 	void transferirFuncionario() {
 		
 	}
+
+	@Override
+	public String toString() {
+		return "Agencia [codigo=" + codigo + ", nome=" + nome + ", endereco=" + endereco + "]";
+	}
+	
+	
 	
 }

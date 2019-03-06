@@ -1,30 +1,30 @@
 // JAVA CODE CONVENTION
 
 /*-
- * Comentários de bloco podem começar com / * -, reconhecido pelo travessão (1)
- * como o início de um bloco de comentário que não deve ser reformatado, ou
- * seja é um alerta de que, quem o fez quer que mantenha nessa forma.
+ * Comentï¿½rios de bloco podem comeï¿½ar com / * -, reconhecido pelo travessï¿½o (1)
+ * como o inï¿½cio de um bloco de comentï¿½rio que nï¿½o deve ser reformatado, ou
+ * seja ï¿½ um alerta de que, quem o fez quer que mantenha nessa forma.
  */
 
 /*-
- * Comentários
+ * Comentï¿½rios
  *
- * Programas em Java podem ter dois tipos de comentários: comentários de
- * implementação do código e comentários de documentação. Observações de aplicação
- * são os encontrados no mesmo modo C ++, que são delimitados por / * ... * /, e
- * / /. Comentários de documentação (conhecido como "comentários doc") são
- * Java-only, e são delimitados por / ** ... * /. Comentários de documentação
- * podem ser extraídos para arquivos HTML usando a ferramenta javadoc.
+ * Programas em Java podem ter dois tipos de comentï¿½rios: comentï¿½rios de
+ * implementaï¿½ï¿½o do cï¿½digo e comentï¿½rios de documentaï¿½ï¿½o. Observaï¿½ï¿½es de aplicaï¿½ï¿½o
+ * sï¿½o os encontrados no mesmo modo C ++, que sï¿½o delimitados por / * ... * /, e
+ * / /. Comentï¿½rios de documentaï¿½ï¿½o (conhecido como "comentï¿½rios doc") sï¿½o
+ * Java-only, e sï¿½o delimitados por / ** ... * /. Comentï¿½rios de documentaï¿½ï¿½o
+ * podem ser extraï¿½dos para arquivos HTML usando a ferramenta javadoc.
  */
 
 /*- 
- * COMENTÁRIOS NO INÍCIO DA CLASSE COM O NOME DA CLASSE, INFORMAÇÃO DE VERSÃO,
- * DATA E HORA, AUTOR E INFORMAÇÕES GERAIS SOBRE O MÉTODO
+ * COMENTï¿½RIOS NO INï¿½CIO DA CLASSE COM O NOME DA CLASSE, INFORMAï¿½ï¿½O DE VERSï¿½O,
+ * DATA E HORA, AUTOR E INFORMAï¿½ï¿½ES GERAIS SOBRE O Mï¿½TODO
  */
 
 /*-
- * Um comentário de bloco deve ser precedido por uma linha em branco para
- * separá-la do resto do código.
+ * Um comentï¿½rio de bloco deve ser precedido por uma linha em branco para
+ * separï¿½-la do resto do cï¿½digo.
  */
 
 /**
@@ -32,60 +32,57 @@
  * 
  * Version Information		1.0
  * 
- * Date						5 de março de 2019								
+ * Date						5 de marï¿½o de 2019								
  * 
  * @author					Marcos Vasconcellos de Andrade
  * 
- * Copyright notice			Método Principal do projeto SISTEMA BANCÁRIO
+ * Copyright notice			Mï¿½todo Principal do projeto SISTEMA BANCï¿½RIO
  *  
  */
 
 // PRIMEIRO O PACOTE E DEPOIS OS IMPORTs, SE HOUVEREM
 
-// O NOME DO PACOTE É UM COMPONENTE ÚNICO, ESCRITO EM MINÚSCULOS
-package banco; /* domínio local */
-
-import com.sun.org.apache.xerces.internal.dom.DeferredProcessingInstructionImpl;
-import com.sun.security.ntlm.Client;
+// O NOME DO PACOTE ï¿½ UM COMPONENTE ï¿½NICO, ESCRITO EM MINï¿½SCULOS
+package banco; /* domï¿½nio local */
 
 /*- 
- * Este comentário deve conter todas as informações da classe ou interface de
- * forma ampla visando sua documentação.
+ * Este comentï¿½rio deve conter todas as informaï¿½ï¿½es da classe ou interface de
+ * forma ampla visando sua documentaï¿½ï¿½o.
  */
 
 /**
- * Classe Principal do Projeto SISTEMA BANCÁRIO
+ * Classe Principal do Projeto SISTEMA BANCï¿½RIO
  * 
- * destinada a criação dos objetos
+ * destinada a criaï¿½ï¿½o dos objetos
  *
  */
 
 /*-
- * Os nomes de classe devem ser substantivos, em maiúsculas e minúsculas com a
- * primeira letra de cada palavra interna em maiúscula. Tente manter seus nomes
+ * Os nomes de classe devem ser substantivos, em maiï¿½sculas e minï¿½sculas com a
+ * primeira letra de cada palavra interna em maiï¿½scula. Tente manter seus nomes
  * de classe simples e descritivo. Sempre evite palavras-ligadas , evite todas
- * siglas e abreviaturas, seja semântico.
+ * siglas e abreviaturas, seja semï¿½ntico.
  */
 
 public abstract class Banco {
 
 /*-
- * Alinhamento do código
+ * Alinhamento do cï¿½digo
  *
- * Inicie com 4 espaços ou um tab. A construção exata do recuo
- * (espaços vs tabs) é indeterminado.
+ * Inicie com 4 espaï¿½os ou um tab. A construï¿½ï¿½o exata do recuo
+ * (espaï¿½os vs tabs) ï¿½ indeterminado.
  *
  * Evite linhas com mais de 80 caracteres, uma vez que em alguns terminais fica
- * mais difícil de ler.	
+ * mais difï¿½cil de ler.	
  */
 	
 	public static void main(String[] args) {
 /*-  
- * Comentários muito curtos podem aparecer na mesma linha do código que está
- * inserida, mas deve ser deslocado o suficiente para separá-los das
- * declarações.
- * Se mais de um breve comentário aparecer em um trecho de código, todos eles
- * deverão ser recuados para a definição mesma guia, deixando sempre
+ * Comentï¿½rios muito curtos podem aparecer na mesma linha do cï¿½digo que estï¿½
+ * inserida, mas deve ser deslocado o suficiente para separï¿½-los das
+ * declaraï¿½ï¿½es.
+ * Se mais de um breve comentï¿½rio aparecer em um trecho de cï¿½digo, todos eles
+ * deverï¿½o ser recuados para a definiï¿½ï¿½o mesma guia, deixando sempre
  * alinhados.
  */
 		//tarefa 1 - Criar cliente e atribuir uma conta
@@ -93,11 +90,42 @@ public abstract class Banco {
 		Conta contaDoMarcos = new Conta("654321", "corrente", 150.00);
 		marcos.atribuirConta(contaDoMarcos);
 		
-		//tarefa 2 - Operações de saque, depósito e transferência
+		Cliente fabio = new Cliente("Fabio", "98745210-55", "Rua 2");
+		Conta contaDoFabio = new Conta("235687", "poupanca", 2000);
+		fabio.atribuirConta(contaDoFabio);
 		
-		marcos.
+		//tarefa 2 - Operaï¿½ï¿½es de saque, depï¿½sito e transferï¿½ncia
 		
-		System.out.println(marcos.toString());
+		marcos.depositar(1000);
+		marcos.sacar(100);
+		marcos.transferir(200.00, contaDoFabio);
+		
+		// Alterar o limite de uma conta
+		
+		marcos.mudarlimite(1000.00);
+		
+		// Transferir uma conta para outra agencia
+		
+		// criando duas agencias
+		Agencia ag1 = new Agencia("0101-1", "Agencia 1", "Rua A");
+		Agencia ag2 = new Agencia("0202-2", "Agencia 2", "Rua B");
+		
+		// atribuindo as agencias aos clientes
+		marcos.atribuirAgencia(ag1);
+		fabio.atribuirAgencia(ag2);
+		
+		// transferindo uma conta para outra agencia
+		
+		System.out.println("Cliente: " + marcos.getNome() + "\n" +"Agencia Antiga: " + marcos.getAgencia() + "\n");
+		
+		marcos.atribuirAgencia(ag2);
+		
+		
+		System.out.println("\n" + marcos.toString() + "\n");
+		System.out.println("Nova agencia: " + marcos.getAgencia() + "\n");
+						
+		System.out.println(fabio.toString() + "\n");
+		System.out.println(fabio.getAgencia());
 		
 	}
 }
