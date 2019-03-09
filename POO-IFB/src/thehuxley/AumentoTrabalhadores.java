@@ -3,7 +3,7 @@ package thehuxley;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class aumentoTrabalhadores {
+public class AumentoTrabalhadores {
 
 	public static void main(String[] args) {
 		

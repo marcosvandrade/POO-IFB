@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 //Faça um programa que calcule a área de um retângulo a partir dos tamanhos de seu lado maior e de seu lado menor.
 
-public class areaDoRetangulo {
+public class AreaDoRetangulo {
 
 	public static void main(String[] args) {
 		

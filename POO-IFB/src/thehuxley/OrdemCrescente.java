@@ -2,7 +2,7 @@ package thehuxley;
 
 import java.util.Scanner;
 
-public class ordemCrescente {
+public class OrdemCrescente {
 
 	public static void main(String[] args) {
 		

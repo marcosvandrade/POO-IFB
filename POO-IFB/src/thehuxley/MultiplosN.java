@@ -2,7 +2,7 @@ package thehuxley;
 
 import java.util.Scanner;
 
-public class multiplosN {
+public class MultiplosN {
 
 	public static void main(String[] args) {
 

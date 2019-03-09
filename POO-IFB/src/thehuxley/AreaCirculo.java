@@ -3,7 +3,7 @@ package thehuxley;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class areaCirculo {
+public class AreaCirculo {
 
 	public static void main(String[] args) {
 		

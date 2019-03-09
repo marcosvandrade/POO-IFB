@@ -2,7 +2,7 @@ package thehuxley;
 
 import java.util.Scanner;
 
-public class maiorMultiplo {
+public class MaiorMultiplo {
 
 	public static void main(String[] args) {
 				
