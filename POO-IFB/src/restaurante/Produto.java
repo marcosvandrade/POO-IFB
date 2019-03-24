@@ -19,5 +19,12 @@ public class Produto extends Pedido {
 	public void happyHour() {
 		
 	}
+
+	@Override
+	public String toString() {
+		return "Produto [codigo=" + codigo + ", nome=" + nome + ", preco=" + preco + "]";
+	}
+	
+	
 	
 }
