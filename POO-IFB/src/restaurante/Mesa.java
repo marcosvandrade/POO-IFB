@@ -1,20 +1,21 @@
 package restaurante;
 
-public class Mesa extends Conta {
-	
-	private int mesaNumero;
-	private boolean disponivel;
+public class Mesa {
+	private String numeroMesa;
 		
-	public void consultarParcial() {
-		
+	public Mesa(String numeroMesa) {
+		super();
+		this.numeroMesa = numeroMesa;
 	}
-	
-	public void fecharConta() {
-		
+
+	public String getNumeroMesa() {
+		return numeroMesa;
 	}
-	
-	public void verificarMesaDisponivel() {
-		
+
+	public void setNumeroMesa(String numeroMesa) {
+		this.numeroMesa = numeroMesa;
 	}
+
+	
 	
 }
