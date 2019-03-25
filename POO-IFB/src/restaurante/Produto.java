@@ -1,30 +1,28 @@
 package restaurante;
 
-public class Produto extends Pedido {
-		
-	private int codigo;
-	private String nome;
-	private double preco;
-		
-	public Produto(int codigo, String nome, double preco) {
-		this.codigo = codigo;
-		this.nome = nome;
-		this.preco = preco;
-	}
-
-	public void sobremesaGratis() {
-		
-	}
+public class Produto {
 	
-	public void happyHour() {
+		private int codigo;
+		private String nome;
+		private double preco;
+			
+		public Produto(int codigo, String nome, double preco) {
+			this.codigo = codigo;
+			this.nome = nome;
+			this.preco = preco;
+		}
+					
+		public void sobremesaGratis() {
+			
+		}
 		
-	}
-
-	@Override
-	public String toString() {
-		return "Produto [codigo=" + codigo + ", nome=" + nome + ", preco=" + preco + "]";
-	}
+		public void happyHour() {
+			
+		}
 	
-	
+		@Override
+		public String toString() {
+			return "Produto [codigo=" + codigo + ", nome=" + nome + ", preco=" + preco + "]";
+		}
 	
 }
