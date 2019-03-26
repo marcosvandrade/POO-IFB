@@ -17,8 +17,10 @@ public class Conta {
 	}
 	
 	public void adicionarMesa(Mesa mesa) {
+		if(mesa == mesas[mesa].getNumeroMesa()) {
 		this.mesas[qtd] = mesa;
 		qtd++;
+		}
 	}
 	
 	public void removerMesa(String numeroMesa) {
