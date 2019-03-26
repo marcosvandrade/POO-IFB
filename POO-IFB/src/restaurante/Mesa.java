@@ -12,6 +12,7 @@ public class Mesa {
 	}
 		
 	public int getNrMesa() {
+		System.out.print("A mesa numero ");
 		return this.nrMesa;
 	}
 
@@ -20,11 +21,7 @@ public class Mesa {
 	}
 
 	public boolean getDisponivel() {
-		if(disponivel == true) {
-			System.out.println("Disponivel");;
-		}else{
-			System.out.println("Indisponivel");
-		}
+		
 		return disponivel;
 	}
 

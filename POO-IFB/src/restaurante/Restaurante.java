@@ -62,14 +62,29 @@ public class Restaurante {
 			case 1:
 				//listando as mesas disponiveis
 				System.out.println("Qual mesa gostaria de reservar?\n");
-				//mesas.forEach(mesa -> {System.out.println("Mesa: " + mesa.getNrMesa() + " Disponivel: " + mesa.getDisponivel() + "\n");});
+				mesas.forEach(mesa -> {
+					System.out.print(mesa.getNrMesa() );
+					boolean disponivel = mesa.getDisponivel();
+					if(disponivel) {
+						System.out.println(" esta Disponivel \n");;
+					}else{
+						System.out.println(" ENCONTRA-SE INDISPONIVEL!!! \n");
+					}
+				});
 				
+				//reservando a mesa escolhida
+				int mesa = s.nextInt();
+				Mesa escolhida = mesas.get(mesa);
+				escolhida.setDisponivel(false);
 				
 				
 				
 				break;
 			case 2:
-				//TODO
+				//listando as mesas disponiveis
+				
+				
+				
 				break;
 			case 3:
 				//TODO
