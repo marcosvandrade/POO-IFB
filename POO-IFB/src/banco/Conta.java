@@ -36,7 +36,7 @@
  * 
  * @author					Marcos Vasconcellos de Andrade
  * 
- * Copyright notice			Classe Conta2 do projeto SISTEMA BANC�RIO
+ * Copyright notice			Classe Conta do projeto SISTEMA BANC�RIO
  *  
  */
 
@@ -55,7 +55,7 @@ package banco;
 */
 
 /**
-* Classe Conta2 do Projeto SISTEMA BANC�RIO
+* Classe Conta do Projeto SISTEMA BANC�RIO
 * 
 * destinada ao controle de contas bancarias
 *
@@ -186,7 +186,7 @@ public class Conta extends Cliente{
 
 	@Override
 	public String toString() {
-		return "Conta2 [saldo=" + saldo + ", numero=" + numero + ", tipo=" + tipo + ", ativa=" + ativa + ", limite="
+		return "Conta [saldo=" + saldo + ", numero=" + numero + ", tipo=" + tipo + ", ativa=" + ativa + ", limite="
 				+ limite + "]";
 	}
 		

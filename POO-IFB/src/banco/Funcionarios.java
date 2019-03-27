@@ -36,7 +36,7 @@
  * 
  * @author					Marcos Vasconcellos de Andrade
  * 
- * Copyright notice			Classe Conta2 do projeto SISTEMA BANC�RIO
+ * Copyright notice			Classe Conta do projeto SISTEMA BANC�RIO
  *  
  */
 

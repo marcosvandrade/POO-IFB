@@ -11,7 +11,7 @@ public class Main2 {
 				
 		Scanner s = new Scanner(System.in);
 		int option = 1;
-		Conta2 conta2 = new Conta2("1","Marcos",10);
+		Conta conta = new Conta("1","Marcos",10);
 		while (option != 0) {
 			
 			//criando os produtos
@@ -35,7 +35,7 @@ public class Main2 {
 			produto2s.add(new Produto2(15,"Brownie de chocolate",18.00));
 			
 			System.out.println("Escolha uma opcao:");
-			System.out.println("1 -  Adicionar Pedido2");
+			System.out.println("1 -  Adicionar Pedido");
 			System.out.println("2 -  remover mesa");
 			System.out.println("3 -  listar mesas");
 			System.out.println("0 -  Encerrar programa");
@@ -47,8 +47,8 @@ public class Main2 {
 				//reservando a  mesa
 				System.out.println("Digite o numero da mesa");
 				String numeroMesa =  s.nextLine();
-				Mesa2 novaMesa = new Mesa2(numeroMesa);
-				conta2.adicionarMesa(novaMesa);
+				Mesa novaMesa = new Mesa(numeroMesa);
+				conta.adicionarMesa(novaMesa);
 				//Mostrando o menu
 				//produtos.forEach(produto -> {System.out.println("Produto2: " + produto.getNome() + "\nPreco: " + produto.getPreco() + "\n");});
 				
@@ -61,10 +61,10 @@ public class Main2 {
 			case 2:
 				System.out.println("Digite o numero da mesa:");
 				String mesa = s.nextLine();
-				conta2.removerMesa(mesa);
+				conta.removerMesa(mesa);
 				break;
 			case 3:
-				conta2.listarMesas();
+				conta.listarMesas();
 				break;
 			}
 						
