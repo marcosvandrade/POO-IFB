@@ -28,7 +28,7 @@
  */
 
 /**
- * classname				Main
+ * classname				Main2
  * 
  * Version Information		1.0
  * 

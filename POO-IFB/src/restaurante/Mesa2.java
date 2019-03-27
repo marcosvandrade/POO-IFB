@@ -1,9 +1,9 @@
 package restaurante;
 
-public class Mesa {
+public class Mesa2 {
 	private String numeroMesa;
 		
-	public Mesa(String numeroMesa) {
+	public Mesa2(String numeroMesa) {
 		super();
 		this.numeroMesa = numeroMesa;
 	}

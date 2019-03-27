@@ -16,7 +16,7 @@ public class ContaCorrente extends Conta{
 	}
 	
 	public void sacar(double valor) {
-		System.out.println("Sacando da Conta Corrente");
+		System.out.println("Sacando da Conta2 Corrente");
 		if(valor > 0 && (saldo + limite > valor)) {
 			this.saldo -= valor;
 		}else {

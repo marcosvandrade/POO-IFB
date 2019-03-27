@@ -1,31 +1,31 @@
 package restaurante;
 
-public class Conta {
+public class Conta2 {
 	private String codigo;
 	private String nome;
-	private Mesa[] mesas;
+	private Mesa2[] mesa2s;
 	private int maxMesas;
 	private int qtd;
 	
-	public Conta(String codigo, String nome, int maxMesas) {
+	public Conta2(String codigo, String nome, int maxMesas) {
 		super();
 		this.codigo = codigo;
 		this.nome = nome;
-		this.mesas = new Mesa[maxMesas];
+		this.mesa2s = new Mesa2[maxMesas];
 		this.maxMesas = maxMesas;
 		this.qtd = 0;
 	}
 	
-	public void adicionarMesa(Mesa mesa) {
-		//if(mesa == mesas[mesa].getNumeroMesa()) {
-		this.mesas[qtd] = mesa;
+	public void adicionarMesa(Mesa2 mesa2) {
+		//if(mesa == mesa2s[mesa].getNumeroMesa()) {
+		this.mesa2s[qtd] = mesa2;
 		qtd++;
 		//}
 	}
 	
 	public void removerMesa(String numeroMesa) {
 		for (int i = 0; i < qtd; i++) {
-			if (mesas[i].getNumeroMesa().contentEquals(numeroMesa)) {
+			if (mesa2s[i].getNumeroMesa().contentEquals(numeroMesa)) {
 				this.arrumarArray(i);
 				return;
 			}
@@ -34,7 +34,7 @@ public class Conta {
 
 	private void arrumarArray(int p) {
 		for (int i = p; i < qtd-1; i++) {
-			this.mesas[i] = this.mesas[i+1];
+			this.mesa2s[i] = this.mesa2s[i+1];
 		}
 		qtd--;
 	}
@@ -42,7 +42,7 @@ public class Conta {
 	public void listarMesas() {
 		System.out.println("Mesas ocupadas: ");
 		for (int i = 0; i < qtd; i++) {
-			System.out.println("- " + mesas[i].getNumeroMesa());
+			System.out.println("- " + mesa2s[i].getNumeroMesa());
 		}
 	}
 	

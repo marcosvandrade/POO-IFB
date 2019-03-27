@@ -1,6 +1,6 @@
 package restaurante;
 
-public class Pedido {
+public class Pedido2 {
 			
 	public void adicionarPedido() {
 		
