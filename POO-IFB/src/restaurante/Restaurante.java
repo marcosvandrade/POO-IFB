@@ -7,7 +7,7 @@ public class Restaurante {
 
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
-		
+		int option = 1;
 		//criando as mesas
 		ArrayList<Mesa> mesas = new ArrayList<>();
 		mesas.add(new Mesa(1));
@@ -20,7 +20,7 @@ public class Restaurante {
 		mesas.add(new Mesa(8));
 		mesas.add(new Mesa(9));
 		mesas.add(new Mesa(10));
-		//mesas.forEach(mesa -> {System.out.println("Mesa: " + mesa.getMesas() + "\n");});
+		//mesas.forEach(mesa -> {System.out.println("Mesa: " + mesa.getNrMesa() + " Disponivel: " + mesa.getDisponivel() + "\n");});
 				
 		//criando os produtos
 		ArrayList<Produto> produtos = new ArrayList<>();
@@ -45,34 +45,47 @@ public class Restaurante {
 				
 		//System.out.println(cardapio.toString());
 		//produtos.forEach(produto -> {System.out.println("Produto: " + produto.getNome() + "\nPreco: " + produto.getPreco() + "\n");});
-
 		
-		//System.out.println(mesas.getMesas());
+		//Pedidos
+		while (option != 0) {
+			System.out.println("Escolha uma opcao:\n");
+			System.out.println("1 -  Realizar o pedido");
+			System.out.println("2 -  listar as mesas disponiveis");
+			System.out.println("3 -  Remover o pedido");
+			System.out.println("4 -  Consultar Parcial");
+			System.out.println("5 -  Fechar a conta");
+			System.out.println("0 -  Encerrar programa");
+			option = s.nextInt();
+			s.nextLine();
+			switch(option) {
+			//realizar pedido
+			case 1:
+				//listando as mesas disponiveis
+				System.out.println("Qual mesa gostaria de reservar?\n");
+				//mesas.forEach(mesa -> {System.out.println("Mesa: " + mesa.getNrMesa() + " Disponivel: " + mesa.getDisponivel() + "\n");});
 				
-		//while (option != 0) {
-			//System.out.println("Escolha uma opcao:");
-			//System.out.println("1 -  Reservar mesa");
-			//System.out.println("2 -  Realizar o pedido");
-			//System.out.println("3 -  listar as mesas disponiveis");
-			//System.out.println("4 -  Remover o pedido");
-			//System.out.println("5 -  Consultar Parcial");
-			//System.out.println("6 -  Fechar a conta");
-			//System.out.println("0 -  Encerrar programa");
-			//option = s.nextInt();
-			//s.nextLine();
-			//switch(option) {
-			//case 1:
+				
+				
+				
+				break;
+			case 2:
 				//TODO
-				//break;
-			//case 2:
+				break;
+			case 3:
 				//TODO
-				//break;
-			//case 3:
+				break;
+			case 4:
 				//TODO
-				//break;
-			//}
+				break;
+			case 5:
+				//TODO
+				break;
+			case 0:
+				//TODO
+				break;
+			}
 	
-		//}
+		}
 		
 						
 		s.close();
