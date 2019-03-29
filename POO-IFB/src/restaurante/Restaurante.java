@@ -66,25 +66,47 @@ public class Restaurante {
 					System.out.print(mesa.getNrMesa() );
 					boolean disponivel = mesa.getDisponivel();
 					if(disponivel) {
-						System.out.println(" esta Disponivel \n");;
+						System.out.println(" esta Disponivel \n");						
 					}else{
 						System.out.println(" ENCONTRA-SE INDISPONIVEL!!! \n");
 					}
+					
 				});
 				
 				//reservando a mesa escolhida
-				int mesa = s.nextInt();
-				Mesa escolhida = mesas.get(mesa);
+				int escolha = s.nextInt();
+				Mesa escolhida = mesas.get(escolha-1);//o -1 eh pq o array comeca na posicao 0
 				escolhida.setDisponivel(false);
 				
+				//realizando o pedido
+				System.out.println("O que deseja pedir?");
+				//listando o cardapio
+				//mesas.forEach(mesa -> {
+					//System.out.print(mesa.getNrMesa() );
+					//boolean disponivel = mesa.getDisponivel();
+					//if(disponivel) {
+						//System.out.println(" esta Disponivel \n");						
+					//}else{
+						//System.out.println(" ENCONTRA-SE INDISPONIVEL!!! \n");
+					//}
+					
+				//});
 				
-				
+					
 				break;
 			case 2:
 				//listando as mesas disponiveis
-				
-				
-				
+				System.out.println("Qual mesa gostaria de reservar?\n");
+				mesas.forEach(mesa -> {
+					System.out.print(mesa.getNrMesa() );
+					boolean disponivel = mesa.getDisponivel();
+					if(disponivel) {
+						System.out.println(" esta Disponivel \n");						
+					}else{
+						System.out.println(" ENCONTRA-SE INDISPONIVEL!!! \n");
+					}
+					
+				});
 				break;
 			case 3:
 				//TODO
@@ -104,6 +126,8 @@ public class Restaurante {
 		
 						
 		s.close();
+		
+		
 	}
 
 }

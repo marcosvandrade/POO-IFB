@@ -21,7 +21,6 @@ public class Mesa {
 	}
 
 	public boolean getDisponivel() {
-		
 		return disponivel;
 	}
 
