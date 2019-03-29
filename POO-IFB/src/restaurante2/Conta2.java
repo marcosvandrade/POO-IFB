@@ -1,4 +1,6 @@
-package restaurante;
+package restaurante2;
+
+import restaurante.Mesa;
 
 public class Conta2 {
 	private String codigo;

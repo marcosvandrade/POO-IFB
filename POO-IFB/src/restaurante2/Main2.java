@@ -1,9 +1,11 @@
-package restaurante;
+package restaurante2;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import restaurante.Produto2;
+
+import restaurante.Mesa;
+import restaurante2.Produto2;
 
 public class Main2 {
 		
