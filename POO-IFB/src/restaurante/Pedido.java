@@ -2,12 +2,17 @@ package restaurante;
 
 public class Pedido {
 			
-	public void adicionarPedido() {
-		//listar mesas disponíveis
-		System.out.println();
-		System.out.println("Qual mesa gostaria de ocupar?");
-	}
+	int idPedido;
+	private Mesa mesa;
+	private Produto produtos;
 	
+	public Pedido(int idPedido, Mesa mesa, Produto produtos) {
+		//super();
+		this.idPedido = idPedido;
+		this.mesa = mesa;
+		this.produtos = produtos;
+	}
+
 	public void removerPedido() {
 		
 	}

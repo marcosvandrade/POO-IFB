@@ -12,7 +12,6 @@ public class Mesa {
 	}
 		
 	public int getNrMesa() {
-		System.out.print("A mesa numero ");
 		return this.nrMesa;
 	}
 
@@ -27,7 +26,7 @@ public class Mesa {
 	public void setDisponivel(boolean disponivel) {
 		this.disponivel = disponivel;
 	}
-		
+
 }
 		
 

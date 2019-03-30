@@ -1,5 +1,7 @@
 package restaurante;
 
+import java.text.DecimalFormat;
+
 public class Produto {
 	
 		private int codigo;
@@ -46,7 +48,7 @@ public class Produto {
 
 		@Override
 		public String toString() {
-			return "Produto [codigo=" + codigo + ", nome=" + nome + ", preco=" + preco + "]";
+			return "Produto codigo= \n"+codigo+nome+"\n"+"Valor= "+preco;
 		}
 	
 }

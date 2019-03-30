@@ -61,7 +61,7 @@ public class Restaurante {
 			//realizar pedido
 			case 1:
 				//listando as mesas disponiveis
-				System.out.println("Qual mesa gostaria de reservar?\n");
+				System.out.println("Qual mesa gostaria de reservar?\n");				
 				mesas.forEach(mesa -> {
 					System.out.print(mesa.getNrMesa() );
 					boolean disponivel = mesa.getDisponivel();
@@ -72,27 +72,66 @@ public class Restaurante {
 					}
 					
 				});
-				
 				//reservando a mesa escolhida
 				int escolha = s.nextInt();
-				Mesa escolhida = mesas.get(escolha-1);//o -1 eh pq o array comeca na posicao 0
-				escolhida.setDisponivel(false);
-				
+				Mesa mesaEscolhida = mesas.get(escolha-1);//o -1 eh pq o array comeca na posicao 0
+				mesaEscolhida.setDisponivel(false);
+							
 				//realizando o pedido
-				System.out.println("O que deseja pedir?");
 				//listando o cardapio
-				//mesas.forEach(mesa -> {
-					//System.out.print(mesa.getNrMesa() );
-					//boolean disponivel = mesa.getDisponivel();
-					//if(disponivel) {
-						//System.out.println(" esta Disponivel \n");						
-					//}else{
-						//System.out.println(" ENCONTRA-SE INDISPONIVEL!!! \n");
-					//}
-					
-				//});
+				produtos.forEach(produto -> {
+					System.out.println("ID: "+produto.getCodigo()+" Produto: "+produto.getNome()
+										+" Preco R$ "+produto.getPreco()+"\n");});
 				
-					
+				//listando a mesa escolhida
+				System.out.println("A mesa reservada foi a numero "+mesaEscolhida.getNrMesa());
+				//escolhendo o produto
+				System.out.println("\nDigite o codigo do produto que deseja escolher: ");
+				int escolhaProd1 = s.nextInt();
+				//armazenando o produto escolhido				
+				Produto escolhidoProd1 = produtos.get(escolhaProd1-1);
+				//listando os produtos escolhidos
+				System.out.println("Produto(s) escolhido(s): " + "ID "+escolhidoProd1.getCodigo()+" - "
+									+escolhidoProd1.getNome()+" - Preco R$ "+escolhidoProd1.getPreco());
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				//escolhendo outro produto
+				int option2 = 1;
+				
+				while(option2 != 0) {
+				
+				System.out.println("\nGostaria de escolher outro produto?");
+				System.out.println("digite 1 para sim");
+				System.out.println("       2 para nao");
+				System.out.println("       0 para sair");
+				
+				int escolha3 = s.nextInt();
+				
+				if(escolha3 == 1) {
+					//listando o cardapio
+					produtos.forEach(produto -> {
+						System.out.println("ID: "+produto.getCodigo()+" Produto: "+produto.getNome()
+											+" Preco R$ "+produto.getPreco()+"\n");});
+					//escolhendo o produto
+					System.out.println("\nDigite o codigo do produto que deseja escolher: ");
+					int escolha4 = s.nextInt();
+					//armazenando o produto escolhido				
+					Produto escolhido4 = produtos.get(escolha4-1);
+					//listando os produtos escolhidos
+					System.out.println("Produto(s) escolhido(s): " + "ID "+escolhido4.getCodigo()+" - "
+										+escolhido4.getNome()+" - Preco R$ "+escolhido4.getPreco());
+					}
+				}
 				break;
 			case 2:
 				//listando as mesas disponiveis
@@ -123,8 +162,7 @@ public class Restaurante {
 			}
 	
 		}
-		
-						
+					
 		s.close();
 		
 		
