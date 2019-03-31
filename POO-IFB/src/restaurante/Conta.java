@@ -1,49 +1,48 @@
-//package restaurante;
+package restaurante;
 
-//public class Conta {
-	//private String codigo;
-	//private String nome;
-	//private Mesa[] mesas;
-	//private int maxMesas;
-	//private int qtd;
+public class Conta {
+	private Mesa mesa;
+	private Produto produto;
+	private double totalParcial;
 	
-	//public Conta(String codigo, String nome, int maxMesas) {
+	
+	public Conta(Mesa mesa, Produto produto, double totalParcial) {
 	//	super();
-	//	this.codigo = codigo;
-	//	this.nome = nome;
-	//	this.mesas = new Mesa[maxMesas];
-	//	this.maxMesas = maxMesas;
-	//	this.qtd = 0;
-	//}
+		this.mesa = mesa;
+		this.produto = produto;
+		this.totalParcial = totalParcial;
+	}
 	
-	//public void adicionarMesa(Mesa mesa) {
-		//if(mesa == mesas[mesa].getNumeroMesa()) {
-		//this.mesas[qtd] = mesa;
-		//qtd++;
-		//}
-	//}
-	
-	//public void removerMesa(String numeroMesa) {
-		//for (int i = 0; i < qtd; i++) {
-			//if (mesas[i].getNumeroMesa().contentEquals(numeroMesa)) {
-				//this.arrumarArray(i);
-				//return;
-			//}
-		//}
-	//}
+	public Mesa getMesa() {
+		return mesa;
+	}
 
-	//private void arrumarArray(int p) {
-		//for (int i = p; i < qtd-1; i++) {
-			//this.mesas[i] = this.mesas[i+1];
-		//}
-		//qtd--;
-	//}
-	
-	//public void listarMesas() {
-		//System.out.println("Mesas ocupadas: ");
-		//for (int i = 0; i < qtd; i++) {
-			//System.out.println("- " + mesas[i].getNumeroMesa());
-		//}
-	//}
-	
-//}
+
+	public void setMesa(Mesa mesa) {
+		this.mesa = mesa;
+	}
+
+
+	public Produto getProduto() {
+		return produto;
+	}
+
+
+	public void setProduto(Produto produto) {
+		this.produto = produto;
+	}
+
+	public double getTotalParcial() {
+		return totalParcial;
+	}
+
+	public void setTotalParcial(double totalParcial) {
+		this.totalParcial = totalParcial;
+	}
+
+	@Override
+	public String toString() {
+		return "Conta [mesa=" + mesa + ", produto=" + produto + ", totalParcial=" + totalParcial + "]";
+	}
+
+}

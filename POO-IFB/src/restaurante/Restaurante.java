@@ -3,11 +3,12 @@ package restaurante;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Restaurante {
+public abstract class Restaurante {
 
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
 		int option = 1;
+		
 		//criando as mesas
 		ArrayList<Mesa> mesas = new ArrayList<>();
 		mesas.add(new Mesa(1));
@@ -24,18 +25,21 @@ public class Restaurante {
 				
 		//criando os produtos
 		ArrayList<Produto> produtos = new ArrayList<>();
+		
 		//refeicoes
 		produtos.add(new Produto(1,"File de Frango",10.90));
 		produtos.add(new Produto(2,"File de Angus",12.90));
 		produtos.add(new Produto(3,"Parmegiana",16.90));
 		produtos.add(new Produto(4,"Picanha 120 gr",16.90));
 		produtos.add(new Produto(5,"Picanha 240 gr",24.90));
+		
 		//bebidas
 		produtos.add(new Produto(6,"Refrigerante 600ml",4.50));
 		produtos.add(new Produto(7,"Refrigerante 2 litros",7.50));
 		produtos.add(new Produto(8,"Refrigerante lata",3.50));
 		produtos.add(new Produto(9,"Agua 500ml",2.50));
 		produtos.add(new Produto(10,"Suco",4.50));
+		
 		//sobremesas
 		produtos.add(new Produto(11,"Torta de maca",18.00));
 		produtos.add(new Produto(12,"Salada de Frutas",15.00));
@@ -58,8 +62,10 @@ public class Restaurante {
 			option = s.nextInt();
 			s.nextLine();
 			switch(option) {
+			
 			//realizar pedido
 			case 1:
+				
 				//listando as mesas disponiveis
 				System.out.println("Qual mesa gostaria de reservar?\n");				
 				mesas.forEach(mesa -> {
@@ -72,64 +78,64 @@ public class Restaurante {
 					}
 					
 				});
+				
 				//reservando a mesa escolhida
 				int escolha = s.nextInt();
 				Mesa mesaEscolhida = mesas.get(escolha-1);//o -1 eh pq o array comeca na posicao 0
 				mesaEscolhida.setDisponivel(false);
-							
-				//realizando o pedido
-				//listando o cardapio
-				produtos.forEach(produto -> {
-					System.out.println("ID: "+produto.getCodigo()+" Produto: "+produto.getNome()
-										+" Preco R$ "+produto.getPreco()+"\n");});
-				
+						
 				//listando a mesa escolhida
 				System.out.println("A mesa reservada foi a numero "+mesaEscolhida.getNrMesa());
+				
 				//escolhendo o produto
-				System.out.println("\nDigite o codigo do produto que deseja escolher: ");
-				int escolhaProd1 = s.nextInt();
-				//armazenando o produto escolhido				
-				Produto escolhidoProd1 = produtos.get(escolhaProd1-1);
-				//listando os produtos escolhidos
-				System.out.println("Produto(s) escolhido(s): " + "ID "+escolhidoProd1.getCodigo()+" - "
-									+escolhidoProd1.getNome()+" - Preco R$ "+escolhidoProd1.getPreco());
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				//escolhendo outro produto
+								
 				int option2 = 1;
+				double totalParcial = 0;
 				
 				while(option2 != 0) {
 				
-				System.out.println("\nGostaria de escolher outro produto?");
+				System.out.println("\nGostaria de escolher um produto?");
 				System.out.println("digite 1 para sim");
-				System.out.println("       2 para nao");
 				System.out.println("       0 para sair");
 				
-				int escolha3 = s.nextInt();
+				option2 = s.nextInt();
+				s.nextLine();
 				
-				if(escolha3 == 1) {
+					if(option2 == 1) {	
 					//listando o cardapio
 					produtos.forEach(produto -> {
 						System.out.println("ID: "+produto.getCodigo()+" Produto: "+produto.getNome()
-											+" Preco R$ "+produto.getPreco()+"\n");});
-					//escolhendo o produto
+											+" Preco R$ "+produto.getPreco()+"\n");});	
+									
 					System.out.println("\nDigite o codigo do produto que deseja escolher: ");
-					int escolha4 = s.nextInt();
-					//armazenando o produto escolhido				
-					Produto escolhido4 = produtos.get(escolha4-1);
-					//listando os produtos escolhidos
-					System.out.println("Produto(s) escolhido(s): " + "ID "+escolhido4.getCodigo()+" - "
-										+escolhido4.getNome()+" - Preco R$ "+escolhido4.getPreco());
+					int produtoEscolha = s.nextInt();
+					
+					//armazenando o produto escolhido em um array na classe conta
+					// e vinculando a conta a uma mesa
+					
+					Produto produtoEscolhido = produtos.get(produtoEscolha-1);
+					
+					//configurando o acumulador para o total parcial
+					
+					totalParcial = totalParcial + produtoEscolhido.getPreco();
+					
+					Conta[] conta = new Conta[100];
+					//Pedido[] pedido = new Pedido[100];
+					
+					for (int i = 0; i < 100; i++) {
+						if(produtoEscolhido.getCodigo()!= 0) {
+							conta[i] = new Conta(mesaEscolhida,produtoEscolhido,totalParcial);
+							//pedido[i] = new Pedido(mesaEscolhida,produtoEscolhido);
+						}
+					}
+					
+					//listando a mesa e os pedidos (parcial)
+					//System.out.println(conta[i].getMesa());
+					
+//					System.out.println("Mesa "+mesaEscolhida.getNrMesa()+" --> Pedido: "
+//										+"ID "+produtoEscolhido.getCodigo()+" - "
+//										+produtoEscolhido.getNome()+" - Preco R$ "+produtoEscolhido.getPreco()
+//										+" - Total Parcial R$ "+totalParcial);
 					}
 				}
 				break;
@@ -151,7 +157,12 @@ public class Restaurante {
 				//TODO
 				break;
 			case 4:
-				//TODO
+
+				System.out.println("Conta parcial ate o momento");
+				//System.out.println(conta[i].toString());
+				
+				
+				
 				break;
 			case 5:
 				//TODO

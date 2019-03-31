@@ -1,7 +1,5 @@
 package restaurante;
 
-import java.text.DecimalFormat;
-
 public class Produto {
 	
 		private int codigo;
