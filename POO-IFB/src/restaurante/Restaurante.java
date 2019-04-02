@@ -8,6 +8,7 @@ public abstract class Restaurante {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
 		int option = 1;
+		double totalParcial = 0;
 		
 		//criando as mesas
 		ArrayList<Mesa> mesas = new ArrayList<>();
@@ -61,6 +62,7 @@ public abstract class Restaurante {
 			System.out.println("0 -  Encerrar programa");
 			option = s.nextInt();
 			s.nextLine();
+						
 			switch(option) {
 			
 			//realizar pedido
@@ -81,17 +83,16 @@ public abstract class Restaurante {
 				
 				//reservando a mesa escolhida
 				int escolha = s.nextInt();
+	
 				Mesa mesaEscolhida = mesas.get(escolha-1);//o -1 eh pq o array comeca na posicao 0
 				mesaEscolhida.setDisponivel(false);
-						
 				//listando a mesa escolhida
 				System.out.println("A mesa reservada foi a numero "+mesaEscolhida.getNrMesa());
-				
+
 				//escolhendo o produto
 								
 				int option2 = 1;
-				double totalParcial = 0;
-				
+								
 				while(option2 != 0) {
 				
 				System.out.println("\nGostaria de escolher um produto?");
@@ -118,24 +119,11 @@ public abstract class Restaurante {
 					//configurando o acumulador para o total parcial
 					
 					totalParcial = totalParcial + produtoEscolhido.getPreco();
-					
-					Conta[] conta = new Conta[100];
-					//Pedido[] pedido = new Pedido[100];
-					
-					for (int i = 0; i < 100; i++) {
-						if(produtoEscolhido.getCodigo()!= 0) {
-							conta[i] = new Conta(mesaEscolhida,produtoEscolhido,totalParcial);
-							//pedido[i] = new Pedido(mesaEscolhida,produtoEscolhido);
-						}
-					}
-					
-					//listando a mesa e os pedidos (parcial)
-					//System.out.println(conta[i].getMesa());
-					
-//					System.out.println("Mesa "+mesaEscolhida.getNrMesa()+" --> Pedido: "
-//										+"ID "+produtoEscolhido.getCodigo()+" - "
-//										+produtoEscolhido.getNome()+" - Preco R$ "+produtoEscolhido.getPreco()
-//										+" - Total Parcial R$ "+totalParcial);
+						
+					System.out.println("Mesa "+mesaEscolhida.getNrMesa()+" --> Pedido: "
+										+"ID "+produtoEscolhido.getCodigo()+" - "
+										+produtoEscolhido.getNome()+" - Preco R$ "+produtoEscolhido.getPreco()
+										+" - Total Parcial R$ "+totalParcial);
 					}
 				}
 				break;
@@ -159,16 +147,13 @@ public abstract class Restaurante {
 			case 4:
 
 				System.out.println("Conta parcial ate o momento");
-				//System.out.println(conta[i].toString());
-				
-				
+				System.out.println("Total Parcial R$ " + totalParcial);
 				
 				break;
 			case 5:
 				//TODO
 				break;
 			case 0:
-				//TODO
 				break;
 			}
 	
