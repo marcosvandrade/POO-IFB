@@ -21,7 +21,7 @@ public abstract class Restaurante {
 		mesas.add(new Mesa(8));
 		mesas.add(new Mesa(9));
 		mesas.add(new Mesa(10));
-		
+				
 		//criando os produtos
 		ArrayList<Produto> produtos = new ArrayList<>();
 		
@@ -51,7 +51,7 @@ public abstract class Restaurante {
 			System.out.println("Escolha uma opcao:\n");
 			System.out.println("1 -  Realizar o pedido");
 			System.out.println("2 -  listar as mesas disponiveis");
-			System.out.println("3 -  Remover o pedido");
+			System.out.println("3 -  Remover um pedido");
 			System.out.println("4 -  Consultar Parcial");
 			System.out.println("5 -  Fechar a conta");
 			System.out.println("0 -  Encerrar programa");
@@ -124,8 +124,8 @@ public abstract class Restaurante {
 				});
 				break;
 			case 3:
-				//removendo o pedido
-				System.out.println("Qual mesa gostaria de remover os pedidos?\n");				
+				//removendo um pedido
+				System.out.println("Qual mesa gostaria de remover um pedido?\n");				
 				
 				//listando as mesas
 				mesas.forEach(mesa -> {
@@ -143,10 +143,10 @@ public abstract class Restaurante {
 				
 				mesaEscolhida = mesas.get(escolha-1);
 				
-				//removendo os pedidos e zerando a conta
+				//removendo um pedido
 				mesaEscolhida.removerProdutos(produtos);
 				
-				//tornando a mesa disponível para reserva novamente
+				//tornando a mesa disponivel para reserva novamente
 				mesaEscolhida.setDisponivel(true);
 					
 				break;
@@ -210,7 +210,7 @@ public abstract class Restaurante {
 				
 				mesaEscolhida.removerProdutos(produtos);
 				
-				//tornando a mesa disponível para reserva novamente
+				//tornando a mesa disponivel para reserva novamente
 				mesaEscolhida.setDisponivel(true);
 									
 				break;

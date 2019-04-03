@@ -52,11 +52,29 @@ public class Mesa {
 		System.out.println("\n");
 		
 	}
+	
+	public void removerUmProduto(List<Produto> prods){
+			
+		System.out.println("Digite o ID do produto que deseja remover do pedido:");
+		Scanner s = new Scanner(System.in);
+		int produtoEscolha = s.nextInt();
+		s.nextLine();
+		Produto produtoEscolhido = prods.get(produtoEscolha-1);
+				
+		produtos.remove(produtoEscolhido);
 		
+		System.out.println("\n");
+		
+		listarProdutos();
+		
+		System.out.println("\n");
+		
+	}
+	
 	public void removerProdutos(List<Produto> prods) {
 		
-			produtos = new ArrayList<>();
-			totalParcial = 0;
+		produtos = new ArrayList<>();
+		totalParcial = 0;
 			
 	}
 	
