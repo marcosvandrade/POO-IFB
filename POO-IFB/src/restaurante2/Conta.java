@@ -1,4 +1,7 @@
-package restaurante;
+package restaurante2;
+
+import restaurante.Mesa;
+import restaurante.Produto;
 
 public class Conta {
 	private Mesa mesa;

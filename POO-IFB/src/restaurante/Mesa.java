@@ -42,28 +42,38 @@ public class Mesa {
 		s.nextLine();
 		Produto produtoEscolhido = prods.get(produtoEscolha-1);
 		
-		System.out.println("Mesa "+getNrMesa()+" --> Pedido: "
-				+"ID "+produtoEscolhido.getCodigo()+" - "
-				+produtoEscolhido.getNome()+" - Preco R$ "
-				+produtoEscolhido.getPreco());
-						
+//		System.out.println("Mesa "+getNrMesa()+" --> Pedido: "
+//				+"ID "+produtoEscolhido.getCodigo()+" - "
+//				+produtoEscolhido.getNome()+" - Preco R$ "
+//				+produtoEscolhido.getPreco());
+					
 		produtos.add(produtoEscolhido);
 		
-		//s.close();
+		System.out.println("\n");
+		
+		listarProdutos();
+		
+		System.out.println("\n");
+		
 	}
 	
 	public void listarProdutos() {
+		
+		System.out.println("Produtos escolhidos ate o momento: \n");
+		
 		produtos.forEach(prod -> {
-			System.out.println("Mesa "+getNrMesa()+" --> Pedido: "+"ID "
-							   + prod.getCodigo()+prod.getNome() + " - Preco R$ "
-							   + prod.getPreco());});
+			
+			System.out.print("Mesa "+getNrMesa()+" --> Pedido: "+"ID "
+							   + prod.getCodigo()+" - "+prod.getNome());
+			
+			System.out.printf(" - Preco R$ %.2f %n", prod.getPreco());});
 	}
 	
 	public void totalParcial() {
 		produtos.forEach(total ->{
 			totalParcial = totalParcial + total.getPreco();
 		});
-		System.out.println(totalParcial);
+		System.out.printf("TOTAL PARCIAL ate o momento: R$ %.2f %n",totalParcial);
 	}
 	
 

@@ -45,8 +45,7 @@ public abstract class Restaurante {
 		produtos.add(new Produto(13,"Pudim de doce de leite",15.00));
 		produtos.add(new Produto(14,"Cesta de Churros com sorvete de doce de leite",22.00));
 		produtos.add(new Produto(15,"Brownie de chocolate",18.00));
-				
-		
+			
 		//Pedidos
 		while (option != 0) {
 			System.out.println("Escolha uma opcao:\n");
@@ -74,7 +73,6 @@ public abstract class Restaurante {
 					}else{
 						System.out.println(" ENCONTRA-SE INDISPONIVEL!!! \n");
 					}
-					
 				});
 				
 				//reservando a mesa escolhida
@@ -100,6 +98,7 @@ public abstract class Restaurante {
 				s.nextLine();
 				
 					if(option2 == 1) {	
+					
 					//listando o cardapio
 					produtos.forEach(produto -> {
 						System.out.println("ID: "+produto.getCodigo()+" Produto: "+produto.getNome()
@@ -125,17 +124,32 @@ public abstract class Restaurante {
 				});
 				break;
 			case 3:
-				//TODO
+
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 				break;
 			case 4:
-				System.out.println("Qual mesa gostaria de ver parcial?\n");				
+				System.out.println("Qual mesa gostaria de ver a conta parcial?\n");				
+				// listando as mesas
 				mesas.forEach(mesa -> {
-					System.out.print(mesa.getNrMesa() );
+					System.out.print("MESA " + mesa.getNrMesa() );
 					boolean disponivel = mesa.getDisponivel();
 					if(disponivel) {
-						System.out.println(" esta Disponivel \n");						
+						System.out.println(" - Disponivel \n");						
 					}else{
-						System.out.println(" ENCONTRA-SE INDISPONIVEL!!! \n");
+						System.out.println(" - OCUPADA NO MOMENTO \n");
 					}
 					
 				});
@@ -145,8 +159,14 @@ public abstract class Restaurante {
 	
 				mesaEscolhida = mesas.get(escolha-1);
 
-				System.out.println("Conta parcial ate o momento :");
+				System.out.println("Conta parcial ate o momento: ");
+				
+				System.out.println("\n");
+				
 				mesaEscolhida.listarProdutos();
+				
+				System.out.println("\n");
+				
 				mesaEscolhida.totalParcial();
 				
 				break;
