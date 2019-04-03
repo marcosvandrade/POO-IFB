@@ -124,21 +124,29 @@ public abstract class Restaurante {
 				});
 				break;
 			case 3:
-
-
+				//removendo o pedido
+				System.out.println("Qual mesa gostaria de remover o pedido?\n");				
 				
+				//listando as mesas
+				mesas.forEach(mesa -> {
+					System.out.print("MESA " + mesa.getNrMesa() );
+					boolean disponivel = mesa.getDisponivel();
+					if(disponivel) {
+						System.out.println(" - Disponivel \n");						
+					}else{
+						System.out.println(" - OCUPADA NO MOMENTO \n");
+					}
 				
+				});
+								
+				escolha = s.nextInt();
 				
+				mesaEscolhida = mesas.get(escolha-1);
 				
-				
-				
-				
-				
-				
-				
-				
-				
-				
+				//removendo os pedidos
+			
+				mesaEscolhida.removerProdutos(produtos);
+					
 				break;
 			case 4:
 				System.out.println("Qual mesa gostaria de ver a conta parcial?\n");				

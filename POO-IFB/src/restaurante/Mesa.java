@@ -41,12 +41,7 @@ public class Mesa {
 		int produtoEscolha = s.nextInt();
 		s.nextLine();
 		Produto produtoEscolhido = prods.get(produtoEscolha-1);
-		
-//		System.out.println("Mesa "+getNrMesa()+" --> Pedido: "
-//				+"ID "+produtoEscolhido.getCodigo()+" - "
-//				+produtoEscolhido.getNome()+" - Preco R$ "
-//				+produtoEscolhido.getPreco());
-					
+				
 		produtos.add(produtoEscolhido);
 		
 		System.out.println("\n");
@@ -56,7 +51,12 @@ public class Mesa {
 		System.out.println("\n");
 		
 	}
+		
+	public void removerProdutos(List<Produto> prods) {
+		
+		//Produtos produtos = new Produto();
 	
+	}
 	public void listarProdutos() {
 		
 		System.out.println("Produtos escolhidos ate o momento: \n");
