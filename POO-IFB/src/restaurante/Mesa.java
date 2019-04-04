@@ -9,6 +9,7 @@ public class Mesa {
 	private int nrMesa;
 	private boolean disponivel;
 	private List<Produto> produtos;
+	private List<Mesa> mesas;
 	double totalParcial = 0;
 	
 	public Mesa(int nrMesa) {
@@ -54,9 +55,11 @@ public class Mesa {
 		
 	public void removerProdutos(List<Produto> prods) {
 		
-		//Produtos produtos = new Produto();
-	
+			produtos = new ArrayList<>();
+			totalParcial = 0;
+			
 	}
+	
 	public void listarProdutos() {
 		
 		System.out.println("Produtos escolhidos ate o momento: \n");
@@ -69,11 +72,28 @@ public class Mesa {
 			System.out.printf(" - Preco R$ %.2f %n", prod.getPreco());});
 	}
 	
-	public void totalParcial() {
+	public void sobremesaGratis() {
+		
+	}
+	
+	public void happyHour() {
+		
+	}
+	
+	public void totalParcial(List<Mesa> mesas) {
+		
+		totalParcial = 0;
+		
 		produtos.forEach(total ->{
 			totalParcial = totalParcial + total.getPreco();
 		});
-		System.out.printf("TOTAL PARCIAL ate o momento: R$ %.2f %n",totalParcial);
+		
+		double gorgeta = totalParcial * 0.1;
+		System.out.printf("10 porcento de gorjeta R$ %.2f %n", gorgeta);
+		
+		System.out.println("\n");
+		
+		System.out.printf("Valor Total ate o momento: R$ %.2f %n",totalParcial+gorgeta);
 	}
 	
 

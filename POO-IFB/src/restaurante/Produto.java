@@ -11,15 +11,7 @@ public class Produto {
 			this.nome = nome;
 			this.preco = preco;
 		}
-					
-		public void sobremesaGratis() {
-			
-		}
 		
-		public void happyHour() {
-			
-		}
-	
 		public int getCodigo() {
 			return codigo;
 		}

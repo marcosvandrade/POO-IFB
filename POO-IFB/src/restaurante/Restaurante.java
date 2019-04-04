@@ -125,7 +125,7 @@ public abstract class Restaurante {
 				break;
 			case 3:
 				//removendo o pedido
-				System.out.println("Qual mesa gostaria de remover o pedido?\n");				
+				System.out.println("Qual mesa gostaria de remover os pedidos?\n");				
 				
 				//listando as mesas
 				mesas.forEach(mesa -> {
@@ -143,13 +143,15 @@ public abstract class Restaurante {
 				
 				mesaEscolhida = mesas.get(escolha-1);
 				
-				//removendo os pedidos
-			
+				//removendo os pedidos e zerando a conta
 				mesaEscolhida.removerProdutos(produtos);
+				
+				//tornando a mesa disponível para reserva novamente
+				mesaEscolhida.setDisponivel(true);
 					
 				break;
 			case 4:
-				System.out.println("Qual mesa gostaria de ver a conta parcial?\n");				
+				System.out.println("De qual mesa gostaria de ver a conta parcial?\n");				
 				// listando as mesas
 				mesas.forEach(mesa -> {
 					System.out.print("MESA " + mesa.getNrMesa() );
@@ -161,8 +163,7 @@ public abstract class Restaurante {
 					}
 					
 				});
-				
-				//reservando a mesa escolhida
+								
 				escolha = s.nextInt();
 	
 				mesaEscolhida = mesas.get(escolha-1);
@@ -175,13 +176,46 @@ public abstract class Restaurante {
 				
 				System.out.println("\n");
 				
-				mesaEscolhida.totalParcial();
+				mesaEscolhida.totalParcial(mesas);
 				
 				break;
 			case 5:
-				//TODO
+				
+				System.out.println("De qual mesa gostaria de fechar a conta?\n");				
+				// listando as mesas
+				mesas.forEach(mesa -> {
+					System.out.print("MESA " + mesa.getNrMesa() );
+					boolean disponivel = mesa.getDisponivel();
+					if(disponivel) {
+						System.out.println(" - Disponivel \n");						
+					}else{
+						System.out.println(" - OCUPADA NO MOMENTO \n");
+					}
+					
+				});
+				
+				escolha = s.nextInt();
+				
+				mesaEscolhida = mesas.get(escolha-1);
+
+				System.out.println("Resumo da conta: ");
+				
+				System.out.println("\n");
+				
+				mesaEscolhida.listarProdutos();
+				
+				System.out.println("\n");
+				
+				mesaEscolhida.totalParcial(mesas);
+				
+				mesaEscolhida.removerProdutos(produtos);
+				
+				//tornando a mesa disponível para reserva novamente
+				mesaEscolhida.setDisponivel(true);
+									
 				break;
 			case 0:
+				System.out.println("Programa finalizado com sucesso!!!");
 				break;
 			}
 	
