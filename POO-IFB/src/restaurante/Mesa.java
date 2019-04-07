@@ -11,6 +11,8 @@ public class Mesa {
 	private List<Produto> produtos;
 	private List<Mesa> mesas;
 	double totalParcial = 0;
+	boolean refeicao = false;
+	boolean bebida = false;
 	
 	public Mesa(int nrMesa) {
 		super();
@@ -56,6 +58,9 @@ public class Mesa {
 	public void removerUmProduto(List<Produto> prods){
 			
 		System.out.println("Digite o ID do produto que deseja remover do pedido:");
+		
+		listarProdutos();
+		
 		Scanner s = new Scanner(System.in);
 		int produtoEscolha = s.nextInt();
 		s.nextLine();
@@ -90,9 +95,35 @@ public class Mesa {
 			System.out.printf(" - Preco R$ %.2f %n", prod.getPreco());});
 	}
 	
-	public void sobremesaGratis() {
-		
-	}
+//	public void sobremesaGratis() {
+//		
+//		produtos.forEach(prod -> {
+//				
+//			if(prod.getCodigo() >= 1 && prod.getCodigo() <= 5) {
+//				refeicao = true;
+//			}
+//			
+//			if(prod.getCodigo() >= 6 && prod.getCodigo() <= 10) {
+//				bebida = true;
+//			}
+//		
+//		
+//			produtos.forEach(prod2 ->{
+//				
+//				if(refeicao == true && bebida == true) {
+//				
+//					if(prod2.getCodigo() >= 11 && prod2.getCodigo() <= 15) {
+//						
+//							prod2.setPreco(0.0);
+//												
+//					}
+//					//System.out.println("PROMOCAO: \n");
+//					//System.out.println("Parabens, a sobremesa eh por conta da casa!!!\n");
+//				}
+//			});
+//		
+//		});
+//	}
 	
 	public void happyHour() {
 		
@@ -101,6 +132,8 @@ public class Mesa {
 	public void totalParcial(List<Mesa> mesas) {
 		
 		totalParcial = 0;
+		
+		//sobremesaGratis();
 		
 		produtos.forEach(total ->{
 			totalParcial = totalParcial + total.getPreco();

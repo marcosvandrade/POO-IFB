@@ -125,7 +125,7 @@ public abstract class Restaurante {
 				break;
 			case 3:
 				//removendo um pedido
-				System.out.println("Qual mesa gostaria de remover um pedido?\n");				
+				System.out.println("Qual mesa gostaria de remover um produto?\n");				
 				
 				//listando as mesas
 				mesas.forEach(mesa -> {
@@ -144,10 +144,10 @@ public abstract class Restaurante {
 				mesaEscolhida = mesas.get(escolha-1);
 				
 				//removendo um pedido
-				mesaEscolhida.removerProdutos(produtos);
+				mesaEscolhida.removerUmProduto(produtos);
 				
 				//tornando a mesa disponivel para reserva novamente
-				mesaEscolhida.setDisponivel(true);
+				//mesaEscolhida.setDisponivel(true);
 					
 				break;
 			case 4:
