@@ -2,5 +2,6 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="POO-IFB/src"/>
+	<classpathentry kind="lib" path="C:/Users/Aluno/Downloads/javax.mail.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
