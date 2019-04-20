@@ -4,13 +4,13 @@ public class Professor implements ICorpo{
 
 	private String nome;
 	private String siape;
-	private String �rea;
+	private String area;
 	
-	public Professor(String nome, String siape, String �rea) {
+	public Professor(String nome, String siape, String area) {
 		super();
 		this.nome = nome;
 		this.siape = siape;
-		this.�rea = �rea;
+		this.area = area;
 	}
 
 	@Override
@@ -21,7 +21,7 @@ public class Professor implements ICorpo{
 
 	@Override
 	public String toString() {
-		return "Dados do Professor:\nNome:" + nome + "\nSiape:" + siape + "\n�rea:" + �rea + "\n";
+		return "Dados do Professor:\nNome:" + nome + "\nSiape:" + siape + "\nï¿½rea:" + area + "\n";
 	}
 	
 	
