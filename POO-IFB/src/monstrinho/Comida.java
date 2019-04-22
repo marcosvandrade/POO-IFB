@@ -9,7 +9,7 @@ package monstrinho;
  */
 public class Comida extends Acao{
 
-	public Comida(int id) {
+	public Comida() {
 		System.out.println("Hora da COMIDA!");
 		
 		this.saude += saude + 1;

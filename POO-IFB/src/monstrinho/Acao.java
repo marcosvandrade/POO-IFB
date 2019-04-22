@@ -14,11 +14,9 @@ public class Acao extends Monstrinho {
 	int energia;
 	int forca;
 	int saude;
-	int id;
+		
 	
-	
-	
-	public Acao(int id) {
+	public Acao() {
 		energia = 0;
 		forca = 0;
 		saude = 0;
