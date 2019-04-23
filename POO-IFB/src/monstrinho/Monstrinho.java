@@ -4,7 +4,7 @@ package monstrinho;
  * 
  * @author Heitor Barros
  * 
- * Jogo desenvolvido para o Estudo de Caso da disciplina de Programação Orientada a Objetos.
+ * Jogo desenvolvido para o Estudo de Caso da disciplina de ProgramaÃ§Ã£o Orientada a Objetos.
  *
  */
 public class Monstrinho {
@@ -22,8 +22,8 @@ public class Monstrinho {
 	}
 	
 	public void passarTurno() {
-		System.out.println("Seu monstrinho está ficando velho!");
-		//A classe GeradorDeNumeros é utilizada para gerar um número aleatório
+		System.out.println("Seu monstrinho estÃ¡ ficando velho!");
+		//A classe GeradorDeNumeros ï¿½ utilizada para gerar um nï¿½mero aleatï¿½rio
 		//entre 0 e 2 para ser reduzido dos atributos do Monstrinho
 		this.saude -= GeradorDeNumeros.gerar();
 		this.energia -= GeradorDeNumeros.gerar();
@@ -31,26 +31,26 @@ public class Monstrinho {
 	}
 	
 	public void aplicarAcao(Acao acao) {
-		//Ao aplicar uma Ação no monstrinho, seus atributos aumentam
-		//de acordo com os atributos da ação empregada
+		//Ao aplicar uma AÃ§Ã£o no monstrinho, seus atributos aumentam
+		//de acordo com os atributos da aï¿½ï¿½o empregada
 		this.saude += acao.getSaude();
 		this.forca += acao.getForca();
 		this.energia += acao.getEnergia();
 	}
 	
 	public boolean estaVivo() {
-		//Este método retorna verdadeiro quando todos os atributos do
+		//Este mï¿½todo retorna verdadeiro quando todos os atributos do
 		//Monstrinho forem maiores que zero. Caso um dos atributos seja
-		//menor ou igual a zero este método retorna falso.
+		//menor ou igual a zero este mï¿½todo retorna falso.
 		return (this.saude > 0 && this.energia > 0 && this.forca> 0);
 	}
 	
 	public void status() {
-		//Este método imprime os valores dos atributos do Monstrinho
+		//Este mï¿½todo imprime os valores dos atributos do Monstrinho
 		System.out.println("Dados do monstrinho:");
-		System.out.println("Saúde -> " + this.saude);
+		System.out.println("Saï¿½de -> " + this.saude);
 		System.out.println("Energia -> " + this.energia);
-		System.out.println("Força -> " + this.forca);
+		System.out.println("Forï¿½a -> " + this.forca);
 	}
 	
 }

@@ -6,7 +6,7 @@ import java.util.Scanner;
  * 
  * @author Heitor Barros
  * 
- * Jogo desenvolvido para o Estudo de Caso da disciplina de ProgramaÁ„o Orientada a Objetos.
+ * Jogo desenvolvido para o Estudo de Caso da disciplina de Programa√ß√£o Orientada a Objetos.
  *
  */
 
@@ -17,37 +17,37 @@ public class Jogo {
 		Monstrinho monstrinho = new Monstrinho();
 		int opcao, turno = 1;
 		
-		System.out.println("Seu Monstrinho nasceu! \nCuide dele com carinho!\nN„o deixe seus status chegarem a zero");
+		System.out.println("Seu Monstrinho nasceu! \nCuide dele com carinho!\nN√£o deixe seus status chegarem a zero");
 		//Mostra o status do seu monstrinho
 		monstrinho.status();
-		//executa a repetiÁ„o do jogo enquanto seu monstrinho est· vivo
+		//executa a repeti√ß√£o do jogo enquanto seu monstrinho est√° vivo
 		while(monstrinho.estaVivo()) {
-			//Mostra as opÁıes e espera o jogador digitar sua escolha
+			//Mostra as op√ß√µes e espera o jogador digitar sua escolha
 			System.out.println("\n\n### TURNO "+turno+" ###");
-			System.out.println("Escolha uma aÁ„o: ");
+			System.out.println("Escolha uma a√ß√£o: ");
 			System.out.println("1- Comida (E+2 - F+0 - S+1)");
-			System.out.println("2- MalhaÁ„o (E-2 - F+2 - S+1)");
+			System.out.println("2- Malha√ß√£o (E-2 - F+2 - S+1)");
 			System.out.println("3- Descansar (E-1 - F+1 - S+1)");
 			opcao = teclado.nextInt();
 			
-			//Caso o usu·rio digite 1 a opÁ„o È dar Comida ao Monstrinho
+			//Caso o usu√°rio digite 1 a op√ß√£o para dar Comida ao Monstrinho
 			if(opcao == 1) {
 				monstrinho.aplicarAcao(new Comida());
 			}
-			//Caso o usu·rio digite 2 a opÁ„o È fazer o Monstrinho Malhar
+			//Caso o usu√°rio digite 2 a op√ß√£o para fazer o Monstrinho Malhar
 			if (opcao == 2) {
 				monstrinho.aplicarAcao(new Malhacao());
 			}
-			//Caso o usu·rio digite 3 a opÁ„o È fazer o Monstrinho descansar
+			//Caso o usu√°rio digite 3 a op√ß√£o para fazer o Monstrinho descansar
 			if (opcao == 3) {
 				monstrinho.aplicarAcao(new Descansar());
 			}
 			
 			//Revela o status do Monstrinho
 			monstrinho.status();
-			//Executa a aÁ„o de passar turno onde o Monstrinho envelhece
+			//Executa a a√ß√£o de passar turno onde o Monstrinho envelhece
 			monstrinho.passarTurno();
-			//Revela o status do Monstrinho apÛs passar turno
+			//Revela o status do Monstrinho ap√≥s passar turno
 			monstrinho.status();
 			turno++;
 		}		
