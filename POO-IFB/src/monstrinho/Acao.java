@@ -4,23 +4,27 @@ package monstrinho;
  * 
  * @author Heitor Barros
  * 
- * Jogo desenvolvido para o Estudo de Caso da disciplina de Programação Orientada a Objetos.
+ * Jogo desenvolvido para o Estudo de Caso da disciplina de ProgramaÃ§Ã£o Orientada a Objetos.
  *
- *Esta classe representa uma ação genérica.
+ *Esta classe representa uma aÃ§Ã£o genÃ©rica.
  *
  */
-public class Acao {
+public class Acao extends Monstrinho {
 	
 	int energia;
 	int forca;
 	int saude;
+	int id;
 	
-	public Acao() {
+	
+	
+	public Acao(int id) {
 		energia = 0;
 		forca = 0;
 		saude = 0;
 	}
 
+	
 	public int getEnergia() {
 		return energia;
 	}

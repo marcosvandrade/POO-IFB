@@ -4,16 +4,17 @@ package monstrinho;
  * 
  * @author Heitor Barros
  * 
- * Jogo desenvolvido para o Estudo de Caso da disciplina de Programação Orientada a Objetos.
+ * Jogo desenvolvido para o Estudo de Caso da disciplina de Programaï¿½ï¿½o Orientada a Objetos.
  *
  */
 public class Comida extends Acao{
 
-	public Comida() {
+	public Comida(int id) {
 		System.out.println("Hora da COMIDA!");
-		super.energia = 2;
-		super.forca = 0;
-		super.saude = 1;
+		
+		this.saude += saude + 1;
+		this.forca += forca + 1;
+		this.energia += energia + 2;
 	}
 	
 	

@@ -6,7 +6,7 @@ import java.util.Random;
  * 
  * @author Heitor Barros
  * 
- * Jogo desenvolvido para o Estudo de Caso da disciplina de Programação Orientada a Objetos.
+ * Jogo desenvolvido para o Estudo de Caso da disciplina de ProgramaÃ§Ã£oo Orientada a Objetos.
  *
  */
 
@@ -14,7 +14,7 @@ public class GeradorDeNumeros {
 
 	public static int gerar() {
 		Random r = new Random();
-		return r.nextInt(5)/2;
+		return r.nextInt(3);
 	}
 	
 	public static void main(String[] args) {

@@ -1,5 +1,6 @@
 package monstrinho;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -17,7 +18,8 @@ public class Jogo {
 		Monstrinho monstrinho = new Monstrinho();
 		int opcao, turno = 1;
 		
-		System.out.println("Seu Monstrinho nasceu! \nCuide dele com carinho!\nNão deixe seus status chegarem a zero");
+		System.out.println("Seu Monstrinho nasceu! \nCuide dele com carinho!\n"
+							+ "Não deixe seus status chegarem a zero");
 		//Mostra o status do seu monstrinho
 		monstrinho.status();
 		//executa a repetição do jogo enquanto seu monstrinho está vivo
@@ -29,6 +31,12 @@ public class Jogo {
 			System.out.println("2- Malhação (E-2 - F+2 - S+1)");
 			System.out.println("3- Descansar (E-1 - F+1 - S+1)");
 			opcao = teclado.nextInt();
+			
+			//Criando a lista com as ações
+			ArrayList<Acao> acao = new ArrayList<>();
+			//dar comida
+			acao.add(new Acao(1).);
+			
 			
 			//Caso o usuário digite 1 a opção para dar Comida ao Monstrinho
 			if(opcao == 1) {
@@ -42,6 +50,10 @@ public class Jogo {
 			if (opcao == 3) {
 				monstrinho.aplicarAcao(new Descansar());
 			}
+			//Caso o usuário digite 4 a opção para fazer o Monstrinho estudar
+			if (opcao == 4) {
+				monstrinho.aplicarAcao(new Estudar());
+			}
 			
 			//Revela o status do Monstrinho
 			monstrinho.status();
@@ -53,8 +65,9 @@ public class Jogo {
 		}		
 		
 		//Os status do Monstrinho chegaram a zero
-		System.out.println("Seu monstrinho Morreu...");
-		System.out.println("Ele sobreviveu "+ turno + " turnos");
+		System.out.println("Seu monstrinho Morreu...\n");
+		System.out.println("Ele sobreviveu "+ turno + " turnos\n");
+		System.out.println("Com a idade de " + idade + " anos\n");
 		
 		
 		teclado.close();
