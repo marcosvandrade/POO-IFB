@@ -18,12 +18,15 @@ public class Jogo {
 		Scanner teclado = new Scanner(System.in);
 		
 		while(encerrarJogo != 0) {
-			
-		Monstrinho monstrinho = new Monstrinho();
+		
+		System.out.println("Digite o nome do Monstrinho: ");
+		String nome = teclado.nextLine();
+		
+		Monstrinho monstrinho = new Monstrinho(nome);
 		int opcao = 0, opcaoOld = 0, turno = 1;
 		
-			System.out.println("Seu Monstrinho nasceu! Cuide dele com carinho! \n");
-			System.out.println("Não deixe seus status chegarem a zero. \n");
+			System.out.println(nome + ", seu Monstrinho nasceu! Cuide dele com carinho!");
+			System.out.println("Não deixe seus status chegarem a zero.");
 			
 			//Mostra o status do seu monstrinho
 			monstrinho.status();
@@ -31,26 +34,14 @@ public class Jogo {
 			while(monstrinho.estaVivo()) {
 				
 				//Mostra as opções e espera o jogador digitar sua escolha
-				System.out.println("\n\n### TURNO "+turno+" ### \n");
-				System.out.println("Escolha uma ação: \n");
-				System.out.println("1- Comida    -> Saude   + 2");
-				System.out.println("                Forca   + 2");
-				System.out.println("                Energia + 3 \n");
-				System.out.println("2- Malhação  -> Saude   + 3");
-				System.out.println("                Forca   + 2");
-				System.out.println("                Energia - 1 \n");
-				System.out.println("3- Descansar -> Saude   + 2");
-				System.out.println("                Forca   + 1");
-				System.out.println("                Energia - 1 \n");
-				System.out.println("4- Estudar   -> Saude   - 1");
-				System.out.println("                Forca   - 1");
-				System.out.println("                Energia - 1 \n");
-				System.out.println("5- Trabalhar -> Saude   - 1");
-				System.out.println("                Forca   - 2");
-				System.out.println("                Energia - 1 \n");
-				System.out.println("6- Diversao  -> Saude   + 3");
-				System.out.println("                Forca   - 1");
-				System.out.println("                Energia - 1");
+				System.out.println("\n### TURNO "+turno+" ###");
+				System.out.println("Escolha uma ação: ");
+				System.out.println("1- Comida    -> Saude + 2, Forca + 2, Energia + 2");
+				System.out.println("2- Malhação  -> Saude + 3, Forca + 2, Energia - 1");
+				System.out.println("3- Descansar -> Saude + 2, Forca + 1, Energia - 1");
+				System.out.println("4- Estudar   -> Saude - 1, Forca - 1, Energia - 1");
+				System.out.println("5- Trabalhar -> Saude - 1, Forca - 2, Energia - 1");
+				System.out.println("6- Diversao  -> Saude + 3, Forca - 1, Energia - 1");
 				
 				opcao = teclado.nextInt();
 				
@@ -87,20 +78,24 @@ public class Jogo {
 							break;
 						}
 					} else {
-						System.out.println("\n\n\n");
-						System.out.println("DIGITE OUTRA OPÇÃO. NÃO É PERMITIDO REPETIR A MESMA AÇÃO!!! \n");
-						System.out.println("ATENÇÃO!!! SEU MONSTRINHO ESTÁ FICANDO ENTEDIADO!!!");
-						System.out.println("\n\n\n");
+						System.out.println("DIGITE OUTRA OPÇÃO. NÃO É PERMITIDO REPETIR A MESMA AÇÃO!!!");
+						System.out.println("ATENÇÃO!!! SEU MONSTRINHO ESTÁ FICANDO ENTEDIADO!!! \n");
 					  }				
-								
-				//Executa a ação de passar turno onde o Monstrinho envelhece
-				monstrinho.passarTurno();
+				
+				//status antes de passar o turno
+				monstrinho.status();	
 				
 				//bonus
 				monstrinho.bonus();	
 				
 				//loss
 				monstrinho.loss();
+				
+				//status antes de passar o turno
+				monstrinho.status();
+				
+				//Executa a ação de passar turno onde o Monstrinho envelhece
+				monstrinho.passarTurno();
 				
 				//Revela o status do Monstrinho após passar turno
 				monstrinho.status();
@@ -111,25 +106,21 @@ public class Jogo {
 			}		
 			
 			//Os status do Monstrinho chegaram a zero
-			System.out.println("\n\n\n");
-			System.out.println("Seu monstrinho Morreu...\n");
-			System.out.println("Ele sobreviveu "+ turno + " turnos\n");
+			System.out.println(nome + ", seu monstrinho Morreu...");
+			System.out.println("Ele sobreviveu "+ turno + " turnos");
 			System.out.println("Com a idade de " + monstrinho.idade + " anos\n");
-			
-			System.out.println("\n\n\n");
-			
+						
 			System.out.println("Gostaria de iniciar um novo jogo?");
 			System.out.println("Digite 1 para sim");
 			System.out.println("       0 para sair");
 			
-			System.out.println("\n\n\n\n\n\n\n\n\n");
-			
 			encerrarJogo = teclado.nextInt();
-			
+			teclado.nextLine();
 		}
+		
 		teclado.close();
 		
-		System.out.println("\n\n\n");
+		System.out.println("\n");
 		System.out.println("FIM DO JOGO!!!");		
 	}
 	

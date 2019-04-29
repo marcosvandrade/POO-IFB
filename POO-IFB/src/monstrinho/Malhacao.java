@@ -11,7 +11,6 @@ public class Malhacao extends Acao{
 
 	public Malhacao() {
 		
-		System.out.println("\n");
 		System.out.println("Aula de Ginastica! \n");
 		
 		this.saude = 3;
