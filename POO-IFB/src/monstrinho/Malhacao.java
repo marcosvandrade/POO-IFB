@@ -10,10 +10,10 @@ package monstrinho;
 public class Malhacao extends Acao{
 
 	public Malhacao() {
-		System.out.println("Aula de Gin�stica!");
-		this.energia = 2;
+		System.out.println("Aula de Ginastica! \n");
+		this.energia = -2;
 		this.forca = 2;
-		this.saude = -1;
+		this.saude = 1;
 	}
 	
 	

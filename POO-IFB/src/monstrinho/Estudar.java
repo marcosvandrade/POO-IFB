@@ -2,9 +2,9 @@ package monstrinho;
 
 public class Estudar extends Acao {
 	public Estudar() {
-		System.out.println("Estudando!");
-		this.energia = -2;
+		System.out.println("Estudando! \n");
+		this.energia = -1;
 		this.forca = 1;
-		this.saude = 2;
+		this.saude = 1;
 	}
 }

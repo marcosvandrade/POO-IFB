@@ -24,15 +24,15 @@ public class Monstrinho {
 	}
 	
 	public void passarTurno() {
-		System.out.println("Seu monstrinho está ficando velho!\n");
-		System.out.println("Ele está com " + idade + " anos...");
+		System.out.println("Seu monstrinho está ficando velho! \n");
+		this.idade += 1;
+		System.out.println("Ele está com " + idade + " ano(s)... \n");
 		//A classe GeradorDeNumeros é utilizada para gerar um número aleatório
 		//entre 0 e 2 para ser reduzido dos atributos do Monstrinho
 		this.saude -= GeradorDeNumeros.gerar();
 		this.energia -= GeradorDeNumeros.gerar();
 		this.forca -= GeradorDeNumeros.gerar();
-		this.idade += idade + 5;
-	}
+	}	
 	
 	public void aplicarAcao(Acao acao) {
 		//Ao aplicar uma Ação no monstrinho, seus atributos aumentam
@@ -51,7 +51,8 @@ public class Monstrinho {
 	
 	public void status() {
 		//Este método imprime os valores dos atributos do Monstrinho
-		System.out.println("Dados do monstrinho:");
+		System.out.println("Dados do monstrinho: \n");
+		System.out.println("Idade -> " + this.idade + " ano(s)");
 		System.out.println("Saúde -> " + this.saude);
 		System.out.println("Energia -> " + this.energia);
 		System.out.println("Força -> " + this.forca);

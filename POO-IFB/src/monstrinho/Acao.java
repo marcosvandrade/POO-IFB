@@ -15,13 +15,12 @@ public class Acao extends Monstrinho {
 	int forca;
 	int saude;
 		
-	
 	public Acao() {
 		energia = 0;
 		forca = 0;
 		saude = 0;
 	}
-
+	
 	
 	public int getEnergia() {
 		return energia;
@@ -35,7 +34,4 @@ public class Acao extends Monstrinho {
 		return saude;
 	}
 	
-	
-	
-
 }

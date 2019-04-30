@@ -6,25 +6,29 @@ MODIFICAÇÕES NO JOGO MONSTRINHO
 
 3 rankeamento
 
-4 acrescentada a ação estudar ok (fazer mais uma ação)
+4 acrescentada a ação estudar , trabalhar e diversao
 
 5 balanceamento
 
 6 itens bonus ou loss (evento)
 
-7 implementar arraylist para as ações e for para o menu
+7 implementar switch case para as opcoes
 
 8 exibir a idade do monstrinho (ações baseadas na idade - rejuvenescer?)
 
+							BALANCEAMENTO
 
 		ACÕES			SAUDE			FORÇA			ENERGIA
 		
-		COMIDA
+		+COMIDA			  1				  0				   3
 		
-		MALHACAO
+		-MALHACAO		  1				  2				  -2	
 		
-		DESCANSAR
+		+DESCANSAR		  1				  1				   3	
 		
-		ESTUDAR
+		-ESTUDAR  		  1				  1				  -1
 		
-		TRABALHAR
+		-TRABALHAR		 -1				 -2			      -2
+		
+		+DIVERSAO		  2				 -2				  -1
+		 	
