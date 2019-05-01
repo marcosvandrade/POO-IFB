@@ -17,8 +17,7 @@ public class Jogo {
 		Monstrinho monstrinho = new Monstrinho();
 		int opcao, turno = 1;
 		
-		System.out.println("Seu Monstrinho nasceu! \n");
-		System.out.println("Cuide dele com carinho! \n");
+		System.out.println("Seu Monstrinho nasceu! Cuide dele com carinho! \n");
 		System.out.println("Não deixe seus status chegarem a zero. \n");
 		
 		//Mostra o status do seu monstrinho
@@ -29,12 +28,24 @@ public class Jogo {
 			//Mostra as opções e espera o jogador digitar sua escolha
 			System.out.println("\n\n### TURNO "+turno+" ### \n");
 			System.out.println("Escolha uma ação: \n");
-			System.out.println("1- Comida (E+2 - F+0 - S+1)");
-			System.out.println("2- Malhação (E-2 - F+2 - S+1)");
-			System.out.println("3- Descansar (E-1 - F+1 - S+1)");
-			System.out.println("4- Estudar (E-1 - F+1 - S+1)");
-			System.out.println("5- Trabalhar (E-2 - F-2 - S-1)");
-			System.out.println("6- Diversao (E-1 - F-2 - S+2)");
+			System.out.println("1- Comida    -> Energia + 2");
+			System.out.println("                Forca   + 0");
+			System.out.println("                Saude   + 1 \n");
+			System.out.println("2- Malhação  -> Energia - 2");
+			System.out.println("                Forca   + 2");
+			System.out.println("                Saude   + 1 \n");
+			System.out.println("3- Descansar -> Energia - 1");
+			System.out.println("                Forca   + 1");
+			System.out.println("                Saude   + 1 \n");
+			System.out.println("4- Estudar   -> Energia - 1");
+			System.out.println("                Forca   + 1");
+			System.out.println("                Saude   + 1 \n");
+			System.out.println("5- Trabalhar -> Energia - 2");
+			System.out.println("                Forca   - 2");
+			System.out.println("                Saude   - 1 \n");
+			System.out.println("6- Diversao  -> Energia - 1");
+			System.out.println("                Forca   - 2");
+			System.out.println("                Saude   + 2");
 						
 			opcao = teclado.nextInt();
 			
@@ -79,6 +90,7 @@ public class Jogo {
 		}		
 		
 		//Os status do Monstrinho chegaram a zero
+		System.out.println("\n");
 		System.out.println("Seu monstrinho Morreu...\n");
 		System.out.println("Ele sobreviveu "+ turno + " turnos\n");
 		System.out.println("Com a idade de " + monstrinho.idade + " anos\n");

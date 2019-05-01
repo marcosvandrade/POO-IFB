@@ -10,13 +10,15 @@ MODIFICAÇÕES NO JOGO MONSTRINHO
 
 5 balanceamento
 
-6 itens bonus ou loss (evento)
+6 itens bonus ou loss (evento) - usar ramdon e atributos para definir aleatoriamente os premios e perdas
 
 7 implementar switch case para as opcoes ok
 
 8 exibir a idade do monstrinho (ações baseadas na idade - rejuvenescer?) ok
 
 9 fazer o looping para reiniciar o jogo (0 para sair ou 1 para novo jogo)
+
+10 Ao passar turno configurar um if para as várias fases da vida
 
 							BALANCEAMENTO
 
