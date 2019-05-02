@@ -11,11 +11,12 @@ package monstrinho;
 public class Comida extends Acao{
 
 	public Comida() {
+		
 		System.out.println("Hora da COMIDA! \n");
 		
-		this.saude = 1;
-		this.forca = 0;
-		this.energia = 3;
+		this.saude = 3;
+		this.forca = 2;
+		this.energia = 2;
 		
 	}
 	

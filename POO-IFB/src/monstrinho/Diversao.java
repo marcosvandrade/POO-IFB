@@ -3,8 +3,9 @@ package monstrinho;
 public class Diversao extends Acao {
 	public Diversao() {
 		System.out.println("Hora da diversao!!! \n");
-		this.energia = -1;
-		this.forca = -2;
-		this.saude = 2;
+		
+		this.saude = 3;
+		this.forca = -1;
+		this.energia = -2;
 	}
 }
