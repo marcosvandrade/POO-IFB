@@ -10,12 +10,10 @@ package monstrinho;
 public class Descansar extends Acao{
 	
 	public Descansar() {
-		
 		System.out.println("Hora do soninho! \n");
-		
-		this.saude = 3;
-		this.forca = 3;
-		this.energia = 2;
+		this.saude = 1;
+		this.forca = 1;
+		this.energia = 3;
 	}
 	
 

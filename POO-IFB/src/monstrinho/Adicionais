@@ -1,8 +1,8 @@
 MODIFICAÇÕES NO JOGO MONSTRINHO
 
-1 identificação do usuário ao inicio do jogo
+1 identificação do usuário ao inicio do jogo (jogador)
 
-2 sistema de pontuação para rankeamento
+2 sistema de pontuação para rankeamento ok (idade)
 
 3 rankeamento
 
@@ -10,25 +10,29 @@ MODIFICAÇÕES NO JOGO MONSTRINHO
 
 5 balanceamento
 
-6 itens bonus ou loss (evento)
+6 itens bonus ou loss (evento) - usar ramdon e atributos para definir aleatoriamente os premios e perdas
 
 7 implementar switch case para as opcoes ok
 
-8 exibir a idade do monstrinho (ações baseadas na idade - rejuvenescer?)
+8 exibir a idade do monstrinho (ações baseadas na idade - rejuvenescer?) ok
+
+9 fazer o looping para reiniciar o jogo (0 para sair ou 1 para novo jogo)
+
+10 Ao passar turno configurar um if para as várias fases da vida
 
 							BALANCEAMENTO
 
 		ACÕES			SAUDE			FORÇA			ENERGIA
 		
-		+COMIDA			  3				  2				   2
+		+COMIDA			  1				  0				   3
 		
-		-MALHACAO		  2				  3				  -3	
+		-MALHACAO		  1				  2				  -2	
 		
-		+DESCANSAR		  3				  3				   2	
+		+DESCANSAR		  1				  1				   3	
 		
-		-ESTUDAR  		 -2				 -1				  -3
+		-ESTUDAR  		  1				  1				  -1
 		
-		-TRABALHAR		 -3				 -2			      -2
+		-TRABALHAR		 -1				 -2			      -2
 		
-		+DIVERSAO		  3				 -1				  -2
+		+DIVERSAO		  2				 -2				  -1
 		 	

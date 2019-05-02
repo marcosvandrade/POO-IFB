@@ -25,7 +25,7 @@ public class Monstrinho {
 	
 	public void passarTurno() {
 		System.out.println("Seu monstrinho está ficando velho! \n");
-		this.idade += 1;
+		this.idade += 3;
 		System.out.println("Ele está com " + idade + " ano(s)... \n");
 		//A classe GeradorDeNumeros é utilizada para gerar um número aleatório
 		//entre 0 e 2 para ser reduzido dos atributos do Monstrinho
