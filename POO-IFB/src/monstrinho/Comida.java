@@ -12,11 +12,12 @@ public class Comida extends Acao{
 
 	public Comida() {
 		
+		System.out.println("\n");
 		System.out.println("Hora da COMIDA! \n");
 		
-		this.saude = 3;
+		this.saude = 2;
 		this.forca = 2;
-		this.energia = 2;
+		this.energia = 3;
 		
 	}
 	
