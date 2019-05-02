@@ -24,15 +24,15 @@ MODIFICAÇÕES NO JOGO MONSTRINHO
 
 		ACÕES			SAUDE			FORÇA			ENERGIA
 		
-		+COMIDA			  1				  0				   3
+		+COMIDA			  3				  2				   2
 		
-		-MALHACAO		  1				  2				  -2	
+		-MALHACAO		  3				  2				  -2	
 		
-		+DESCANSAR		  1				  1				   3	
+		+DESCANSAR		  3				  2				   3	
 		
-		-ESTUDAR  		  1				  1				  -1
+		-ESTUDAR  		 -1				 -2				  -3
 		
-		-TRABALHAR		 -1				 -2			      -2
+		-TRABALHAR		 -2				 -3			      -3
 		
-		+DIVERSAO		  2				 -2				  -1
+		+DIVERSAO		  3				 -1				  -2
 		 	
