@@ -31,10 +31,11 @@ public class Monstrinho {
 	}
 
 	public void ranking() {
-		for (int i = 0; i < pontuacao(); i++) {
+		
+		
 			
-		}
-	}	
+	}
+	
 	
 	public int pontuacao() {
 		return idade * turno;
