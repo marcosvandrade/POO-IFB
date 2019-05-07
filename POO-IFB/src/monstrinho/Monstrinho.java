@@ -14,6 +14,7 @@ public class Monstrinho {
 	int energia;
 	int forca;
 	int idade;
+	int turno = 1;
 	
 	//Construtor da classe Monstrinho
 	//Os atributos do Monstrinho iniciam com valor 5
@@ -29,8 +30,18 @@ public class Monstrinho {
 		// TODO Auto-generated constructor stub
 	}
 
+	public void ranking() {
+		for (int i = 0; i < pontuacao(); i++) {
+			
+		}
+	}	
+	
+	public int pontuacao() {
+		return idade * turno;
+	}
+		
 	//bonus
-	public void bonus() {
+	public boolean bonus() {
 		
 		//bonus de idade
 		if(idade == 10) {
@@ -39,20 +50,20 @@ public class Monstrinho {
 			System.out.println("Parabéns, você ganhou 1 ponto de ENERGIA!!! \n");
 		}
 		
-		if(idade == 19) {
+		else if(idade == 19) {
 			this.saude += 1;
 			System.out.println("BONUS!!!");
 			System.out.println("Parabéns, você ganhou 1 ponto de SAUDE!!! \n");
 		}
 		
 		//bonus de saude
-		if((saude >= 15) && (saude <= 18)) {
+		else if((saude >= 15) && (saude <= 18)) {
 			this.saude += 1;
 			System.out.println("BONUS!!!");
 			System.out.println("Parabéns, você ganhou 1 ponto de SAUDE!!! \n");
 		}
 		
-		if((saude == 1)) {
+		else if((saude == 1)) {
 			this.saude += 4;
 			System.out.println("BONUS!!!");
 			System.out.println("Parabéns, você ganhou 4 pontos de SAUDE!!! \n");
@@ -60,35 +71,39 @@ public class Monstrinho {
 		
 				
 		//bonus de energia
-		if((energia >= 15) && (energia <= 18)) {
+		else if((energia >= 15) && (energia <= 18)) {
 			this.energia += 1;
 			System.out.println("BONUS!!!");
 			System.out.println("Parabéns, você ganhou 1 ponto de ENERGIA!!! \n");
 		}
 		
-		if((energia == 2)) {
+		else if((energia == 2)) {
 			this.energia += 3;
 			System.out.println("BONUS!!!");
 			System.out.println("Parabéns, você ganhou 3 pontos de ENERGIA!!! \n");
 		}
 		
 		//bonus de força
-				if((forca >= 15) && (forca <= 18)) {
-					this.forca += 1;
-					System.out.println("BONUS!!!");
-					System.out.println("Parabéns, você ganhou 1 ponto de FORÇA!!! \n");
-				}
-				
-				if((forca == 3)) {
-					this.forca += 2;
-					System.out.println("BONUS!!!");
-					System.out.println("Parabéns, você ganhou 2 pontos de FORCA!!! \n");
-				}
+		else if((forca >= 15) && (forca <= 18)) {
+			this.forca += 1;
+			System.out.println("BONUS!!!");
+			System.out.println("Parabéns, você ganhou 1 ponto de FORÇA!!! \n");
+		}
 		
+		else if((forca == 3)) {
+			this.forca += 2;
+			System.out.println("BONUS!!!");
+			System.out.println("Parabéns, você ganhou 2 pontos de FORCA!!! \n");
+		}
+		else{
+			return false;
+		}
+		
+		return true;
 	}
 	
 	//perdas (ARMADILHAS)
-		public void loss() {
+		public boolean loss() {
 			
 			//loss de idade
 			if((idade > 10) && (idade < 20)) {
@@ -97,56 +112,62 @@ public class Monstrinho {
 				System.out.println("Você perdeu 2 pontos de ENERGIA!!! \n");
 			}
 			
-			if((idade > 35) && (idade < 40)) {
+			else if((idade > 35) && (idade < 40)) {
 				this.saude -= 3;
 				System.out.println("QUE PENA!!! VOCÊ CAIU NUMA ARMADILHA!!!");
 				System.out.println("Você perdeu 3 pontos de SAUDE!!! \n");
 			}
 			
-			if((idade > 50) && (idade < 65)) {
+			else if((idade > 50) && (idade < 65)) {
 				this.forca -= 4;
 				System.out.println("QUE PENA!!! VOCÊ CAIU NUMA ARMADILHA!!!");
 				System.out.println("Você perdeu 4 pontos de FORÇA!!! \n");
 			}
 			
 			//loss de saude
-			if((saude >= 20) && (saude <= 25)) {
+			else if((saude >= 20) && (saude <= 25)) {
 				this.saude -= 1;
 				System.out.println("QUE PENA!!! VOCÊ CAIU NUMA ARMADILHA!!!");
 				System.out.println("Você perdeu 1 ponto de SAUDE!!! \n");
 			}
 			
-			if((saude >= 40) && (saude <= 45)) {
+			else if((saude >= 40) && (saude <= 45)) {
 				this.saude -= 3;
 				System.out.println("QUE PENA!!! VOCÊ CAIU NUMA ARMADILHA!!!");
 				System.out.println("Você perdeu 3 pontos de SAUDE!!! \n");
 			}
 			
 			//loss de energia
-			if((energia >= 30) && (energia <= 35)) {
+			else if((energia >= 30) && (energia <= 35)) {
 				this.energia -= 1;
 				System.out.println("QUE PENA!!! VOCÊ CAIU NUMA ARMADILHA!!!");
 				System.out.println("Você perdeu 1 ponto de ENERGIA!!! \n");
 			}
 			
-			if((energia >= 45) && (energia <= 50)) {
+			else if((energia >= 45) && (energia <= 50)) {
 				this.energia -= 3;
 				System.out.println("QUE PENA!!! VOCÊ CAIU NUMA ARMADILHA!!! \n");
 				System.out.println("Você perdeu 3 pontos de ENERGIA!!! \n");
 			}
 			
 			//loss de força
-					if((forca >= 50) && (forca <= 60)) {
-						this.forca -= 1;
-						System.out.println("QUE PENA!!! VOCÊ CAIU NUMA ARMADILHA!!!");
-						System.out.println("Você perdeu 1 ponto de FORÇA!!! \n");
-					}
+			else if((forca >= 50) && (forca <= 60)) {
+				this.forca -= 1;
+				System.out.println("QUE PENA!!! VOCÊ CAIU NUMA ARMADILHA!!!");
+				System.out.println("Você perdeu 1 ponto de FORÇA!!! \n");
+			}
 					
-					if((forca >= 60) && (forca <= 65)) {
-						this.forca -= 3;
-						System.out.println("QUE PENA!!! VOCÊ CAIU NUMA ARMADILHA!!!");
-						System.out.println("Você perdeu 3 pontos de FORÇA!!! \n");
-					}
+			else if((forca >= 60) && (forca <= 65)) {
+				this.forca -= 3;
+				System.out.println("QUE PENA!!! VOCÊ CAIU NUMA ARMADILHA!!!");
+				System.out.println("Você perdeu 3 pontos de FORÇA!!! \n");
+			}
+			
+			else{
+				return false;
+			}
+			
+			return true;
 			
 		}
 	

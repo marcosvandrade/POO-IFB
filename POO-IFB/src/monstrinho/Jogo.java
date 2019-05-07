@@ -23,7 +23,7 @@ public class Jogo {
 		String nome = teclado.nextLine();
 		
 		Monstrinho monstrinho = new Monstrinho(nome);
-		int opcao = 0, opcaoOld = 0, turno = 1;
+		int opcao = 0, opcaoOld = 0;
 		
 			System.out.println(nome + ", seu Monstrinho nasceu! Cuide dele com carinho!");
 			System.out.println("Não deixe seus status chegarem a zero.");
@@ -34,7 +34,7 @@ public class Jogo {
 			while(monstrinho.estaVivo()) {
 				
 				//Mostra as opções e espera o jogador digitar sua escolha
-				System.out.println("\n### TURNO "+turno+" ###");
+				System.out.println("\n### TURNO "+monstrinho.turno+" ###");
 				System.out.println("Escolha uma ação: ");
 				System.out.println("1- Comida    -> Saude + 2, Forca + 2, Energia + 2");
 				System.out.println("2- Malhação  -> Saude + 3, Forca + 2, Energia - 1");
@@ -92,7 +92,14 @@ public class Jogo {
 				monstrinho.loss();
 				
 				//status antes de passar o turno
+				
+				if(monstrinho.bonus()) {
 				monstrinho.status();
+				}
+				
+				if(monstrinho.loss()) {
+					monstrinho.status();
+					}
 				
 				//Executa a ação de passar turno onde o Monstrinho envelhece
 				monstrinho.passarTurno();
@@ -100,16 +107,17 @@ public class Jogo {
 				//Revela o status do Monstrinho após passar turno
 				monstrinho.status();
 				
-				turno++;
+				monstrinho.turno++;
 				opcaoOld = opcao;
 				
 			}		
 			
 			//Os status do Monstrinho chegaram a zero
 			System.out.println(nome + ", seu monstrinho Morreu...");
-			System.out.println("Ele sobreviveu "+ turno + " turnos");
+			System.out.println("Ele sobreviveu "+ monstrinho.turno + " turnos");
 			System.out.println("Com a idade de " + monstrinho.idade + " anos\n");
-						
+			System.out.println("Sua pontuação foi: " + monstrinho.pontuacao() + " pontos\n");
+			
 			System.out.println("Gostaria de iniciar um novo jogo?");
 			System.out.println("Digite 1 para sim");
 			System.out.println("       0 para sair");
