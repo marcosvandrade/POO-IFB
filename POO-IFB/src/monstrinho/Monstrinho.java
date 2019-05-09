@@ -15,7 +15,8 @@ public class Monstrinho {
 	int forca;
 	int idade;
 	int turno = 1;
-	
+	int pontuacao;
+			
 	//Construtor da classe Monstrinho
 	//Os atributos do Monstrinho iniciam com valor 5
 	public Monstrinho(String nome) {
@@ -30,17 +31,10 @@ public class Monstrinho {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void ranking() {
-		
-		
-			
-	}
-	
-	
 	public int pontuacao() {
 		return idade * turno;
 	}
-		
+	
 	//bonus
 	public boolean bonus() {
 		

@@ -118,6 +118,8 @@ public class Jogo {
 			System.out.println("Com a idade de " + monstrinho.idade + " anos\n");
 			System.out.println("Sua pontuação foi: " + monstrinho.pontuacao() + " pontos\n");
 			
+			Ranking ranking = new Ranking();
+			
 			System.out.println("Gostaria de iniciar um novo jogo?");
 			System.out.println("Digite 1 para sim");
 			System.out.println("       0 para sair");
