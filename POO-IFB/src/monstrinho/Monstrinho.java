@@ -24,6 +24,7 @@ public class Monstrinho {
 		this.energia = 5;
 		this.forca = 5;
 		this.idade = 1;
+		this.nome = nome;
 	}
 	
 	public Monstrinho() {

@@ -1,6 +1,8 @@
 package monstrinho;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -17,6 +19,9 @@ public class Jogo {
 		
 		int encerrarJogo = 1;
 		Scanner teclado = new Scanner(System.in);
+		
+		//criando um arraylist com o ranking
+		List<Ranking> ranking = new ArrayList<>();
 		
 		while(encerrarJogo != 0) {
 		
@@ -119,16 +124,17 @@ public class Jogo {
 			System.out.println("Com a idade de " + monstrinho.idade + " anos\n");
 			System.out.println("Sua pontuação foi: " + monstrinho.pontuacao() + " pontos\n");
 			
-			//criando um arraylist com o ranking
-			ArrayList<Ranking> ranking = new ArrayList();
+		
 			ranking.add(new Ranking(monstrinho.nome, monstrinho.pontuacao));
-			
+			System.out.println(ranking);
 			//imprimindo o ranking
 			
 			System.out.println("RANKING \n");
 			
+			Collections.sort(ranking);
+			
 			ranking.forEach(rank -> {
-				System.out.println(monstrinho.nome + monstrinho.pontuacao + " Pontos \n");
+				System.out.println(rank.nome +" "+ rank.pontuacao + " Pontos \n");
 			});
 						
 			System.out.println("Gostaria de iniciar um novo jogo?");
