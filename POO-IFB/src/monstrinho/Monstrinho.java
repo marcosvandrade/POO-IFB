@@ -30,9 +30,65 @@ public class Monstrinho {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public int getSaude() {
+		return saude;
+	}
+
+	public void setSaude(int saude) {
+		this.saude = saude;
+	}
+
+	public int getEnergia() {
+		return energia;
+	}
+
+	public void setEnergia(int energia) {
+		this.energia = energia;
+	}
+
+	public int getForca() {
+		return forca;
+	}
+
+	public void setForca(int forca) {
+		this.forca = forca;
+	}
+
+	public int getIdade() {
+		return idade;
+	}
+
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+
+	public int getTurno() {
+		return turno;
+	}
+
+	public void setTurno(int turno) {
+		this.turno = turno;
+	}
+
+	public int getPontuacao() {
+		return pontuacao;
+	}
+
+	public void setPontuacao(int pontuacao) {
+		this.pontuacao = pontuacao;
+	}
 
 	public int pontuacao() {
-		return idade * turno;
+		return this.pontuacao = idade * turno;
 	}
 	
 	//bonus

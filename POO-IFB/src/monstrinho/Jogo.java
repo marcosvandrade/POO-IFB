@@ -1,5 +1,6 @@
 package monstrinho;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -25,7 +26,7 @@ public class Jogo {
 		Monstrinho monstrinho = new Monstrinho(nome);
 		int opcao = 0, opcaoOld = 0;
 		
-			System.out.println(nome + ", seu Monstrinho nasceu! Cuide dele com carinho!");
+			System.out.println(monstrinho.nome + ", seu Monstrinho nasceu! Cuide dele com carinho!");
 			System.out.println("Não deixe seus status chegarem a zero.");
 			
 			//Mostra o status do seu monstrinho
@@ -113,13 +114,23 @@ public class Jogo {
 			}		
 			
 			//Os status do Monstrinho chegaram a zero
-			System.out.println(nome + ", seu monstrinho Morreu...");
+			System.out.println(monstrinho.nome + ", seu monstrinho Morreu...");
 			System.out.println("Ele sobreviveu "+ monstrinho.turno + " turnos");
 			System.out.println("Com a idade de " + monstrinho.idade + " anos\n");
 			System.out.println("Sua pontuação foi: " + monstrinho.pontuacao() + " pontos\n");
 			
-			Ranking ranking = new Ranking();
+			//criando um arraylist com o ranking
+			ArrayList<Ranking> ranking = new ArrayList();
+			ranking.add(new Ranking(monstrinho.nome, monstrinho.pontuacao));
 			
+			//imprimindo o ranking
+			
+			System.out.println("RANKING \n");
+			
+			ranking.forEach(rank -> {
+				System.out.println(monstrinho.nome + monstrinho.pontuacao + " Pontos \n");
+			});
+						
 			System.out.println("Gostaria de iniciar um novo jogo?");
 			System.out.println("Digite 1 para sim");
 			System.out.println("       0 para sair");

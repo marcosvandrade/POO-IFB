@@ -1,14 +1,9 @@
 package monstrinho;
 
 public class Ranking extends Monstrinho {
-
-	Monstrinho nome;
-	Monstrinho pontuacao;
 	
-	public Ranking(Monstrinho nome) {
-		super();
+	public Ranking(String nome, int pontuacao) {
 		this.nome = nome;
-		//this.pontuacao = pontuacao;
+		this.pontuacao = pontuacao;
 	}
-	
 }
