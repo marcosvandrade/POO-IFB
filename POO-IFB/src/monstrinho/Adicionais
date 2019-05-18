@@ -1,22 +1,11 @@
 												REQUISITOS DO JOGO MONSTRINHO 2.0
-1. Identificação do jogador ao iniciar a partida;
+												
+1. Jogador deverá se identificar ao iniciar a partida;
 
-2. Implementação de um sistema de pontuação e rankeamento;
+2. Implementado um sistema de pontuação e rankeamento;
 
-3. Balanceamento do jogo;
+3. Balanceamento do jogo conforme tabela;
 
-4. Criar itens de BONUS e LOSS, baseados em alguns critérios aleatórios;
-
-5. Criação de um MENU ao final do jogo, com a opção de iniciar um novo jogo ou terminar;
-
-6. Criação de uma regra que impede o jogador de utilizar a mesma ação duas vezes seguidas;
-
-7. Será criado um rankeamento baseado em pontuação que exibirá as 3 melhores pontuações,
-com o nome do jogador, ao final de cada jogo;
-
-8. Criar as novas ações: estudar, trabalhar e diversão;
-
-9. Exibir a idade do monstrinho dentro da sua respectiva faixa etária.
 
 		---------------------------------------------------------
 	   |					BALANCEAMENTO						 |
@@ -37,6 +26,21 @@ com o nome do jogador, ao final de cada jogo;
 		---------------------------------------------------------
 	   | SOMA       |     2     |         2         |      2     |
 		---------------------------------------------------------
+
+
+4. Criados itens de BONUS e LOSS, baseados em alguns critérios aleatórios;
+
+5. Criado um MENU ao final do jogo, com a opção de iniciar um novo jogo ou terminar;
+
+6. Criado uma regra que impede o jogador de utilizar a mesma ação duas vezes seguidas;
+
+7. Criado um rankeamento baseado na pontuação e no turno, atualizado ao final de cada jogo;
+
+8. Criado as novas ações: estudar, trabalhar e diversão;
+
+9. Será exibido a idade do monstrinho dentro da sua respectiva faixa etária.
+
+fonte:
 
 Predefinição:Faixas etárias do Brasil
 
