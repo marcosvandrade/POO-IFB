@@ -2,7 +2,6 @@ package monstrinho;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -21,7 +20,7 @@ public class Jogo {
 		Scanner teclado = new Scanner(System.in);
 		
 		//criando um arraylist com o ranking
-		List<Ranking> ranking = new ArrayList<>();
+		ArrayList<Ranking> ranking = new ArrayList<>();
 		
 		while(encerrarJogo != 0) {
 		
@@ -31,8 +30,8 @@ public class Jogo {
 		Monstrinho monstrinho = new Monstrinho(nome);
 		int opcao = 0, opcaoOld = 0;
 		
-			System.out.println(monstrinho.nome + ", seu Monstrinho nasceu! Cuide dele com carinho!");
-			System.out.println("Não deixe seus status chegarem a zero.");
+			System.out.println(monstrinho.nome + ", seu Monstrinho nasceu! Cuide dele com carinho!\n");
+			System.out.println("Não deixe seus status chegarem a zero.\n");
 			
 			//Mostra o status do seu monstrinho
 			monstrinho.status();
@@ -42,12 +41,22 @@ public class Jogo {
 				//Mostra as opções e espera o jogador digitar sua escolha
 				System.out.println("\n### TURNO "+monstrinho.turno+" ###");
 				System.out.println("Escolha uma ação: ");
-				System.out.println("1- Comida    -> Saude + 2, Forca + 2, Energia + 2");
-				System.out.println("2- Malhação  -> Saude + 3, Forca + 2, Energia - 1");
-				System.out.println("3- Descansar -> Saude + 2, Forca + 1, Energia - 1");
-				System.out.println("4- Estudar   -> Saude - 1, Forca - 1, Energia - 1");
-				System.out.println("5- Trabalhar -> Saude - 1, Forca - 2, Energia - 1");
-				System.out.println("6- Diversao  -> Saude + 3, Forca - 1, Energia - 1");
+				
+				System.out.print("1-Comer 2-Malhar 3-Descansar 4-Estudar 5-Trabalhar 6-Se divertir");
+							
+//				System.out.print("2- Malhar");
+//				System.out.print("3- Descansar");
+//				System.out.print("4- Estudar");
+//				System.out.print("5- Trabalhar");
+//				System.out.print("6- Se Divertir");
+				
+				
+//				System.out.println("1- Comida    -> Saude + 2, Forca + 2, Energia + 2");
+//				System.out.println("2- Malhação  -> Saude + 3, Forca + 2, Energia - 1");
+//				System.out.println("3- Descansar -> Saude + 2, Forca + 1, Energia - 1");
+//				System.out.println("4- Estudar   -> Saude - 1, Forca - 1, Energia - 1");
+//				System.out.println("5- Trabalhar -> Saude - 1, Forca - 2, Energia - 1");
+//				System.out.println("6- Diversao  -> Saude + 3, Forca - 1, Energia - 1");
 				
 				opcao = teclado.nextInt();
 				
@@ -84,6 +93,7 @@ public class Jogo {
 							break;
 						}
 					} else {
+						System.out.println("\n");
 						System.out.println("DIGITE OUTRA OPÇÃO. NÃO É PERMITIDO REPETIR A MESMA AÇÃO!!!");
 						System.out.println("ATENÇÃO!!! SEU MONSTRINHO ESTÁ FICANDO ENTEDIADO!!! \n");
 					  }				
@@ -123,12 +133,10 @@ public class Jogo {
 			System.out.println("Ele sobreviveu "+ monstrinho.turno + " turnos");
 			System.out.println("Com a idade de " + monstrinho.idade + " anos\n");
 			System.out.println("Sua pontuação foi: " + monstrinho.pontuacao() + " pontos\n");
-			
-		
-			ranking.add(new Ranking(monstrinho.nome, monstrinho.pontuacao));
-			System.out.println(ranking);
+					
+			ranking.add(new Ranking(monstrinho.nome,monstrinho.pontuacao));
+						
 			//imprimindo o ranking
-			
 			System.out.println("RANKING \n");
 			
 			Collections.sort(ranking);

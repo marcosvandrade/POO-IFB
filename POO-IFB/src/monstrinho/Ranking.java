@@ -1,7 +1,5 @@
 package monstrinho;
 
-import exemploCollections.Aluno;
-
 public class Ranking extends Monstrinho implements Comparable<Ranking> {
 	
 	public Ranking(String nome, int pontuacao) {
@@ -10,17 +8,17 @@ public class Ranking extends Monstrinho implements Comparable<Ranking> {
 	}
 
 	@Override
-	public int compareTo(Ranking o) {
-		// TODO Auto-generated method stub
+	public int compareTo(Ranking outroRanking) {
+
+		if (this.pontuacao > outroRanking.getPontuacao()) {
+			return -1;
+		}
+		
+		else if (this.pontuacao < outroRanking.getPontuacao()) {
+			return 1;
+		}
+		
 		return 0;
 	}
-	
-	
-//	@Override
-//	public String toString() {
-//		return "Ranking [" + nome + "=" + getPontuacao() + "]";
-//	}
-//	
-	
-	
+		
 }

@@ -20,9 +20,9 @@ public class Monstrinho {
 	//Construtor da classe Monstrinho
 	//Os atributos do Monstrinho iniciam com valor 5
 	public Monstrinho(String nome) {
-		this.saude = 5;
-		this.energia = 5;
-		this.forca = 5;
+		this.saude = 10;
+		this.energia = 10;
+		this.forca = 10;
 		this.idade = 1;
 		this.nome = nome;
 	}
@@ -159,21 +159,21 @@ public class Monstrinho {
 			
 			//loss de idade
 			if((idade > 10) && (idade < 20)) {
-				this.energia -= 2;
+				this.energia -= 1;
 				System.out.println("QUE PENA!!! VOCÊ CAIU NUMA ARMADILHA!!!");
-				System.out.println("Você perdeu 2 pontos de ENERGIA!!! \n");
+				System.out.println("Você perdeu 1 ponto de ENERGIA!!! \n");
 			}
 			
 			else if((idade > 35) && (idade < 40)) {
-				this.saude -= 3;
+				this.saude -= 2;
 				System.out.println("QUE PENA!!! VOCÊ CAIU NUMA ARMADILHA!!!");
-				System.out.println("Você perdeu 3 pontos de SAUDE!!! \n");
+				System.out.println("Você perdeu 2 pontos de SAUDE!!! \n");
 			}
 			
 			else if((idade > 50) && (idade < 65)) {
-				this.forca -= 4;
+				this.forca -= 3;
 				System.out.println("QUE PENA!!! VOCÊ CAIU NUMA ARMADILHA!!!");
-				System.out.println("Você perdeu 4 pontos de FORÇA!!! \n");
+				System.out.println("Você perdeu 3 pontos de FORÇA!!! \n");
 			}
 			
 			//loss de saude
@@ -204,9 +204,9 @@ public class Monstrinho {
 			
 			//loss de força
 			else if((forca >= 50) && (forca <= 60)) {
-				this.forca -= 1;
+				this.forca -= 4;
 				System.out.println("QUE PENA!!! VOCÊ CAIU NUMA ARMADILHA!!!");
-				System.out.println("Você perdeu 1 ponto de FORÇA!!! \n");
+				System.out.println("Você perdeu 4 ponto de FORÇA!!! \n");
 			}
 					
 			else if((forca >= 60) && (forca <= 65)) {
@@ -269,7 +269,7 @@ public class Monstrinho {
 	
 	public void status() {
 		//Este método imprime os valores dos atributos do Monstrinho
-		System.out.println("\nDados do monstrinho: ");
+		System.out.println("Dados do monstrinho: ");
 		System.out.println("Idade -> " + this.idade + " ano(s)");
 		System.out.println("Saúde -> " + this.saude);
 		System.out.println("Energia -> " + this.energia);
